@@ -1,0 +1,38 @@
+<theme>
+  <include>./variables.xml</include>
+
+  <view name="system">
+    <carousel name="systemcarousel">
+      <type>horizontal</type>
+      <color>${themeColorTransparent}</color>
+      <logoScale>1.9</logoScale>
+      <logoSize>0.15 0.09</logoSize>
+    </carousel>
+
+    <text name="systemInfo">
+      <backgroundColor>${themeColorTransparent}</backgroundColor>
+      <color>${themeColorMuted}</color>
+      <fontPath>${themeFont}</fontPath>
+      <fontSize>${themeFontSizeSubtitle}</fontSize>
+    </text>
+
+    <image name="logo">
+      <path>${themeFolderArt}/systems/${system.theme}.svg</path>
+    </image>
+
+    <text name="logoText">
+      <color>${themeColorText}</color>
+      <fontPath>${themeFont}</fontPath>
+      <fontSize>${themeFontSizeSystem}</fontSize>
+      <forceUppercase>true</forceUppercase>
+    </text>
+
+    <image name="lineart" extra="true">
+      <path>${themeFolderArt}/lineart/${system.theme}.svg</path>
+      <color>ffffff</color>
+      <origin>0.5 0.5</origin>
+      <pos>0.5 0.45</pos>
+      <size>0.3 0</size>
+    </image>
+  </view>
+</theme>

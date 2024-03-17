@@ -1,0 +1,25 @@
+<theme>
+  <formatVersion>6</formatVersion>
+
+  <view name="basic, detailed, video, grid">
+    <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_developer, md_lbl_publisher, md_publisher, md_lbl_genre, md_genre, md_lbl_players, md_players, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_description, md_name">
+      <visible>false</visible>
+    </text>
+
+    <datetime name="md_releasedate, md_lastplayed">
+      <visible>false</visible>
+    </datetime>
+
+    <rating name="md_rating">
+      <visible>false</visible>
+    </rating>
+
+    <image name="md_thumbnail, md_image, md_marquee">
+      <visible>false</visible>
+    </image>
+
+    <video name="md_video">
+      <visible>false</visible>
+    </video>
+  </view>
+</theme>

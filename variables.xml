@@ -1,0 +1,43 @@
+<theme>
+	<subset name="color-scheme" displayName="Color Scheme">
+		<include name="obsidian" displayName="Obsidian" />
+		<include name="old-gold" displayName="Old Gold" />
+		<include name="snes" displayName="SNES" />
+	</subset>
+
+	<variables>
+		<!-- Override these color values to your desired colors. -->
+		<colorPrimary>ffffff</colorPrimary>
+		<colorAccent>efbc0b</colorAccent>
+		<colorBackground>1a1a1a</colorBackground>
+		<colorContentBackground>2f2f2f</colorContentBackground>
+
+		<themeColor>${colorPrimary}</themeColor>
+		<themeColorAccent>${colorAccent}</themeColorAccent>
+		<themeColorBackground>${colorBackground}</themeColorBackground>
+		<themeColorContentBackground>${colorContentBackground}</themeColorContentBackground>
+		<themeColorText>ffffff</themeColorText>
+		<themeColorHelpText>9f9f9f</themeColorHelpText>
+		<themeColorMuted>9e9e9e</themeColorMuted>
+		<themeColorMutedDarker>c3c3c3</themeColorMutedDarker>
+		<themeColorTransparent>00000000</themeColorTransparent>
+
+		<themeFolderAssets>./assets</themeFolderAssets>
+		<themeFolderArt>${themeFolderAssets}/art</themeFolderArt>
+		<themeFolderSounds>${themeFolderAssets}/sounds</themeFolderSounds>
+
+		<themeFont>${themeFolderAssets}/fonts/Cabin-Bold.ttf</themeFont>
+		<themeFontSubtitle>${themeFolderAssets}/fonts/ChangaOne-Italic.ttf</themeFontSubtitle>
+
+		<themeFontSizeSystem>0.032</themeFontSizeSystem>
+		<themeFontSizeGamelist>0.022</themeFontSizeGamelist>
+		<themeFontSizeText>0.022</themeFontSizeText>
+		<themeFontSizeSubtitle>0.016</themeFontSizeSubtitle>
+		<themeFontSizeHelpText>0.014</themeFontSizeHelpText>
+
+		<themeSoundScroll>${themeFolderAssets}/sounds/scroll.wav</themeSoundScroll>
+
+		<systemWhiteImage>${themeFolderArt}/space.png</systemWhiteImage>
+		<systemTransparentGradientImage>${themeFolderArt}/transparent-gradient.png</systemTransparentGradientImage>
+	</variables>
+</theme>

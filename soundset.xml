@@ -1,0 +1,28 @@
+<theme>
+  <formatVersion>6</formatVersion>
+  <feature supported="navigationsounds">
+    <view name="system, basic, details, video, grid, all">
+      <sound name="systembrowse">
+        <path>${themeFolderSounds}/systembrowse.wav</path>
+      </sound>
+      <sound name="quicksysselect">
+        <path>${themeFolderSounds}/quicksysselect.wav</path>
+      </sound>
+      <sound name="select">
+        <path>${themeFolderSounds}/select.wav</path>
+      </sound>
+      <sound name="back">
+        <path>${themeFolderSounds}/back.wav</path>
+      </sound>
+      <sound name="scroll">
+        <path>${themeFolderSounds}/scroll.wav</path>
+      </sound>
+      <sound name="favorite">
+        <path>${themeFolderSounds}/favorite.wav</path>
+      </sound>
+      <sound name="launch">
+        <path>${themeFolderSounds}/launch.wav</path>
+      </sound>
+    </view>
+  </feature>
+</theme>

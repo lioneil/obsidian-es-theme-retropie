@@ -1,0 +1,54 @@
+<theme>
+  <formatVersion>6</formatVersion>
+
+  <view name="system, basic, detailed, video, grid">
+    <image name="background" extra="true">
+      <color>${themeColorBackground}</color>
+      <path>${systemWhiteImage}</path>
+      <size>1 1</size>
+      <origin>0 0</origin>
+      <tile>true</tile>
+      <pos>0 0</pos>
+      <zIndex>0</zIndex>
+    </image>
+
+    <image name="logo">
+      <path>${themeFolderArt}/systems/${system.theme}.svg</path>
+    </image>
+
+    <text name="logoText">
+      <fontPath>${themeFont}</fontPath>
+      <forceUppercase>true</forceUppercase>
+      <lineSpacing>1</lineSpacing>
+      <alignment>center</alignment>
+      <color>${themeColor}</color>
+    </text>
+
+    <textlist name="gamelist">
+      <fontPath>${themeFont}</fontPath>
+      <fontSize>${themeFontSizeGamelist}</fontSize>
+      <forceUppercase>false</forceUppercase>
+      <alignment>center</alignment>
+      <horizontalMargin>0</horizontalMargin>
+      <selectorColor>${themeColorTransparent}</selectorColor>
+      <selectedColor>${themeColorAccent}</selectedColor>
+      <primaryColor>${themeColorMuted}</primaryColor>
+      <secondaryColor>${themeColorText}</secondaryColor>
+      <scrollSound>${themeScrollSound}</scrollSound>
+    </textlist>
+
+    <helpsystem name="help">
+      <iconColor>${themeColorHelpText}</iconColor>
+      <textColor>${themeColorHelpText}</textColor>
+      <fontPath>${themeFont}</fontPath>
+      <fontSize>${themeFontSizeHelpText}</fontSize>
+      <origin>0.5 1</origin>
+      <pos>0.5 0.95</pos>
+    </helpsystem>
+
+    <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_developer, md_lbl_publisher, md_publisher, md_lbl_genre, md_genre, md_lbl_players, md_players, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_description, md_name">
+      <fontSize>${themeFontSizeText}</fontSize>
+      <forceUppercase>0</forceUppercase>
+    </text>
+  </view>
+</theme>

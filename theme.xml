@@ -1,0 +1,36 @@
+<!--
+theme: Obsidian
+version: 1
+author: John Lioneil Dionisio
+license: creative commons CC-BY-NC-SA
+originally based on: "Art Book 1.5" by Anthony Caccese
+originally based on: "Carbon-2021" by Tomas Jakobsson (Tomaz)
+originally based on: "Carbon 2.4" by Eric Hettervik (Rookervik)
+originally based on: "simple" by nils bonenberger
+-->
+
+<theme defaultTransition="slide">
+  <formatVersion>6</formatVersion>
+  <include>./variables.xml</include>
+
+  <!-- START: Global Overrides -->
+  <include>./soundset.xml</include>
+  <include>./global.xml</include>
+  <!-- END: Global Overrides -->
+
+  <!-- START: Main System UI -->
+  <include>./system.xml</include>
+  <!-- START: Main System UI -->
+
+  <!-- START: Basic UI -->
+  <include>./basic.xml</include>
+  <!-- START: Basic UI -->
+
+  <!-- START: Detailed UI -->
+  <include>./detailed.xml</include>
+  <!-- START: Detailed UI -->
+
+  <!-- TODO -->
+  <view name="video"></view>
+  <!-- TODO -->
+</theme>
