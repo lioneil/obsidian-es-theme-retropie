@@ -1,0 +1,22 @@
+<theme>
+  <formatVersion>6</formatVersion>
+
+  <variables>
+    <gamelistSidebarWidth>0.3</gamelistSidebarWidth>
+    <mainContentWidth>0.7</mainContentWidth>
+  </variables>
+
+  <view name="video">
+    <image name="md_marquee">
+      <visible>true</visible>
+    </image>
+
+    <video name="md_video">
+      <origin>0 0</origin>
+      <pos>0.30 0</pos>
+      <size>0.7 1</size>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <zIndex>2</zIndex>
+    </video>
+  </view>
+</theme>
