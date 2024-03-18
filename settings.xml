@@ -21,6 +21,6 @@
     For debugging.
     Useful positioning guidelines if extending the theme.
     -->
-    <systemTurnOnGuides>true</systemTurnOnGuides>
+    <systemTurnOnGuides>false</systemTurnOnGuides>
   </variables>
 </theme>

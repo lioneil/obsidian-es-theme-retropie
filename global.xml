@@ -16,8 +16,11 @@
       <path>${themeFolderArt}/systems/${system.theme}.svg</path>
     </image>
 
-    <text name="logoText">
+    <text name="logoText, md_name">
       <fontPath>${themeFont}</fontPath>
+    </text>
+
+    <text name="logoText">
       <forceUppercase>true</forceUppercase>
       <lineSpacing>1</lineSpacing>
       <alignment>center</alignment>
@@ -48,6 +51,7 @@
 
     <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_developer, md_lbl_publisher, md_publisher, md_lbl_genre, md_genre, md_lbl_players, md_players, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_name">
       <fontSize>${themeFontSizeSubtitle}</fontSize>
+      <color>${themeColorMuted}</color>
       <forceUppercase>0</forceUppercase>
     </text>
     <text name="
@@ -99,7 +103,7 @@
     </image>
   </view>
 
-  <view name="detailed, video">
+  <view name="detailed, video, grid">
     <image name="md_thumbnail">
       <visible>false</visible>
     </image>
@@ -304,10 +308,21 @@
       <size>0.50 0.10</size>
     </text>
     <!-- END: Main Content Area -->
+  </view>
 
+  <view name="detailed, video">
     <helpsystem name="help">
       <origin>0.5 1</origin>
       <pos>0.65 0.95</pos>
     </helpsystem>
+  </view>
+
+  <view name="detailed, video, grid">
+    <text name="md_description">
+      <fontSize>${themeFontSizeText}</fontSize>
+      <color>${themeColorText}</color>
+      <forceUppercase>0</forceUppercase>
+      <alignment>left</alignment>
+    </text>
   </view>
 </theme>

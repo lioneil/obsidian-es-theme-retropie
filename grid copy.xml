@@ -1,0 +1,84 @@
+<theme>
+  <formatVersion>6</formatVersion>
+
+  <variables>
+    <gamelistSidebarWidth>0.3</gamelistSidebarWidth>
+    <mainContentWidth>0.7</mainContentWidth>
+    <gridHeight>0.25</gridHeight>
+  </variables>
+
+  <view name="grid">
+    <image name="logo">
+      <origin>0 0.5</origin>
+      <pos>0.05 0.09</pos>
+      <maxSize>0.12 0.08</maxSize>
+    </image>
+
+    <image name="md_name-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffffaa</color>
+      <size>0.75 0.064</size>
+      <origin>1 0.5</origin>
+      <pos>0.95 0.09</pos>
+    </image>
+    <text name="md_name">
+      <fontSize>${themeFontSizeTitle}</fontSize>
+      <color>${themeColorText}</color>
+      <visible>true</visible>
+      <alignment>right</alignment>
+      <size>0.75 0.068</size>
+      <origin>1 0.5</origin>
+      <pos>0.95 0.09</pos>
+    </text>
+
+    <imagegrid name="gamegrid">
+      <pos>0.05 0.65</pos>
+      <size>1 ${gridHeight}</size>
+      <margin>0.005 0.005</margin>
+      <scrollDirection>horizontal</scrollDirection>
+      <animate>true</animate>
+      <imageSource>thumbnail</imageSource>
+    </imagegrid>
+
+    <gridtile name="default">
+      <size>0.20 ${gridHeight}</size>
+      <backgroundColor>${themeColorContentBackground}</backgroundColor>
+    </gridtile>
+
+    <gridtile name="selected">
+      <backgroundColor>${themeColorAccent}</backgroundColor>
+    </gridtile>
+
+    <text name="
+      md_lbl_rating, md_lbl_releasedate,
+      md_lbl_developer, md_lbl_publisher,
+      md_publisher, md_lbl_genre,
+      md_lbl_lastplayed,
+      md_lbl_playcount, md_playcount,
+    ">
+      <visible>true</visible>
+    </text>
+
+    <rating name="md_rating">
+      <visible>true</visible>
+      <filledPath>${themeFolderArt}/icons/star_filled.svg</filledPath>
+      <unfilledPath>${themeFolderArt}/icons/star_unfilled.svg</unfilledPath>
+    </rating>
+
+    <!-- <image name="md_marquee-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffffaa</color>
+      <size>0.25 0.20</size>
+      <origin>0 1</origin>
+      <pos>0.05 0.45</pos>
+    </image>
+    <image name="md_marquee">
+      <visible>true</visible>
+      <maxSize>0.25 0.20</maxSize>
+      <origin>0 1</origin>
+      <pos>0.05 0.45</pos>
+    </image> -->
+  </view>
+</theme>

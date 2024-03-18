@@ -29,6 +29,7 @@
 		<themeFont>${themeFolderAssets}/fonts/Cabin-Bold.ttf</themeFont>
 		<themeFontSubtitle>${themeFolderAssets}/fonts/ChangaOne-Italic.ttf</themeFontSubtitle>
 
+		<themeFontSizeTitle>0.052</themeFontSizeTitle>
 		<themeFontSizeSystem>0.032</themeFontSizeSystem>
 		<themeFontSizeGamelist>0.022</themeFontSizeGamelist>
 		<themeFontSizeText>0.022</themeFontSizeText>
