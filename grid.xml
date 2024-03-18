@@ -1,0 +1,58 @@
+<theme>
+  <formatVersion>6</formatVersion>
+
+  <variables>
+    <gamelistSidebarWidth>0.3</gamelistSidebarWidth>
+    <mainContentWidth>0.7</mainContentWidth>
+    <gridHeight>0.25</gridHeight>
+  </variables>
+
+  <view name="grid">
+    <image name="logo">
+      <origin>0 0.5</origin>
+      <pos>0.05 0.09</pos>
+      <maxSize>0.12 0.08</maxSize>
+    </image>
+
+    <imagegrid name="gamegrid">
+      <pos>0.05 0.65</pos>
+      <size>1 ${gridHeight}</size>
+      <margin>0.005 0.005</margin>
+      <scrollDirection>horizontal</scrollDirection>
+      <animate>true</animate>
+      <!-- <imageSource>marquee</imageSource> -->
+    </imagegrid>
+
+    <gridtile name="default">
+      <size>0.20 ${gridHeight}</size>
+      <backgroundColor>${themeColorContentBackground}</backgroundColor>
+    </gridtile>
+
+    <gridtile name="selected">
+      <backgroundColor>${themeColorAccent}</backgroundColor>
+    </gridtile>
+
+    <text name="md_name">
+      <forceUppercase>true</forceUppercase>
+      <pos>0.5 0.5</pos>
+      <alignment>center</alignment>
+      <color>969696</color>
+      <visible>true</visible>
+    </text>
+
+    <image name="md_marquee-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffffaa</color>
+      <size>0.25 0.20</size>
+      <origin>0 1</origin>
+      <pos>0.05 0.45</pos>
+    </image>
+    <image name="md_marquee">
+      <visible>true</visible>
+      <maxSize>0.25 0.20</maxSize>
+      <origin>0 1</origin>
+      <pos>0.05 0.45</pos>
+    </image>
+  </view>
+</theme>
