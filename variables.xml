@@ -32,7 +32,7 @@
 		<themeFontSizeSystem>0.032</themeFontSizeSystem>
 		<themeFontSizeGamelist>0.022</themeFontSizeGamelist>
 		<themeFontSizeText>0.022</themeFontSizeText>
-		<themeFontSizeSubtitle>0.016</themeFontSizeSubtitle>
+		<themeFontSizeSubtitle>0.022</themeFontSizeSubtitle>
 		<themeFontSizeHelpText>0.014</themeFontSizeHelpText>
 
 		<themeSoundScroll>${themeFolderAssets}/sounds/scroll.wav</themeSoundScroll>

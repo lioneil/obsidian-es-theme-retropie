@@ -12,6 +12,7 @@ originally based on: "simple" by nils bonenberger
 <theme defaultTransition="slide">
   <formatVersion>6</formatVersion>
   <include>./variables.xml</include>
+  <include>./settings.xml</include>
 
   <!-- START: Global Overrides -->
   <include>./soundset.xml</include>
@@ -30,7 +31,11 @@ originally based on: "simple" by nils bonenberger
   <include>./detailed.xml</include>
   <!-- START: Detailed UI -->
 
-  <!-- TODO -->
-  <view name="video"></view>
-  <!-- TODO -->
+  <!-- START: Video UI -->
+  <include>./video.xml</include>
+  <!-- END: Video UI -->
+
+  <!-- START: Grid UI -->
+  <include>./grid.xml</include>
+  <!-- END: Grid UI -->
 </theme>

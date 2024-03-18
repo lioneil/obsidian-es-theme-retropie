@@ -1,0 +1,26 @@
+<theme>
+  <variables>
+    <!--
+    Available values:
+    screenshot  - use the game screenshot for the md_image.
+    boxart      - use box art for the md_image.
+    composite   - use skyscraper (or similar) compisited image of
+                  box art, screenshots, and marquee for the md_image.
+    -->
+		<mdImageType>screenshot</mdImageType>
+
+    <!--
+    Available values:
+    true     - Gamelist view style detailed and video will have full metadata.
+    false    - Gamelist view style detailed and video will have no metadata, and
+               will only have image and marquee.
+    -->
+		<viewMetadata>true</viewMetadata>
+
+    <!--
+    For debugging.
+    Useful positioning guidelines if extending the theme.
+    -->
+    <systemTurnOnGuides>true</systemTurnOnGuides>
+  </variables>
+</theme>
