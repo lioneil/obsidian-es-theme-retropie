@@ -3,7 +3,7 @@
     <image name="md_image">
       <origin>0 0</origin>
       <pos>0.3 0</pos>
-      <size>0.70 0.95</size>
+      <size>0.70 0.80</size>
       <zIndex>2</zIndex>
     </image>
   </view>

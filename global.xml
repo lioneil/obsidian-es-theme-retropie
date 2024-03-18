@@ -91,6 +91,8 @@
     </text>
 
     <datetime name="md_releasedate, md_lastplayed">
+      <fontSize>${themeFontSizeSubtitle}</fontSize>
+      <color>${themeColorText}</color>
       <visible>${viewMetadata}</visible>
     </datetime>
 
@@ -120,33 +122,6 @@
       <color>${themeColorText}</color>
       <alignment>left</alignment>
     </text>
-
-    <!-- START: Main Content Area -->
-    <image name="md_marquee">
-      <origin>0.5 1</origin>
-      <pos>0.65 0.71</pos>
-      <maxSize>0.25 0.20</maxSize>
-      <zIndex>10</zIndex>
-    </image>
-
-    <image name="main-content-gradient-container" extra="true">
-      <path>${themeFolderArt}/transparent-gradient.white.png</path>
-      <color>${themeColorContentBackground}</color>
-      <origin>0 1</origin>
-      <pos>0.30 1</pos>
-      <size>0.70 0.90</size>
-      <tile>false</tile>
-      <zIndex>3</zIndex>
-    </image>
-
-    <image name="marquee">
-      <visible>true</visible>
-      <origin>0.5 1</origin>
-      <pos>0.65 0.71</pos>
-      <maxSize>0.25 0.20</maxSize>
-      <zIndex>10</zIndex>
-    </image>
-    <!-- END: Main Content Area -->
 
     <!-- START: Gamelist Area -->
     <image name="logo">
@@ -180,64 +155,66 @@
     </image>
     <!-- END: Gamelist Area -->
 
-    <!-- START: Content Guides -->
+    <!-- START: Main Content Area -->
     <image name="md_marquee-container-guide" extra="true">
       <visible>${systemTurnOnGuides}</visible>
       <path>${systemWhiteImage}</path>
-      <color>ffffffaa</color>
+      <color>ffffff50</color>
       <origin>0.5 1</origin>
-      <pos>0.65 0.71</pos>
+      <pos>0.65 0.69</pos>
       <size>0.25 0.20</size>
     </image>
+
+    <image name="md_marquee">
+      <origin>0.5 1</origin>
+      <pos>0.65 0.69</pos>
+      <maxSize>0.25 0.20</maxSize>
+      <zIndex>10</zIndex>
+    </image>
+
+    <image name="main-content-gradient-container" extra="true">
+      <path>${themeFolderArt}/transparent-gradient.white.png</path>
+      <color>${themeColorContentBackground}</color>
+      <origin>0 1</origin>
+      <pos>0.30 0.85</pos>
+      <size>0.70 0.75</size>
+      <tile>false</tile>
+      <zIndex>3</zIndex>
+    </image>
+    <image name="main-content-gradient-solid-bottom-container" extra="true">
+      <path>${systemWhiteImage}</path>
+      <color>${themeColorContentBackground}</color>
+      <origin>0 1</origin>
+      <pos>0.30 1</pos>
+      <size>0.70 0.25</size>
+      <tile>false</tile>
+      <zIndex>3</zIndex>
+    </image>
+
+    <image name="marquee">
+      <visible>true</visible>
+      <origin>0.5 1</origin>
+      <pos>0.65 0.71</pos>
+      <maxSize>0.25 0.20</maxSize>
+      <zIndex>10</zIndex>
+    </image>
+    <!-- END: Main Content Area -->
+
+    <!-- START: Metadata -->
     <image name="md_genre-container-guide" extra="true">
       <visible>${systemTurnOnGuides}</visible>
       <path>${systemWhiteImage}</path>
-      <color>ffffffaa</color>
+      <color>ffffff50</color>
       <origin>0 1</origin>
-      <pos>0.4 0.762</pos>
+      <pos>0.4 0.732</pos>
       <size>0.35 0.025</size>
     </image>
-    <image name="md_developer-container-guide" extra="true">
-      <visible>${systemTurnOnGuides}</visible>
-      <path>${systemWhiteImage}</path>
-      <color>ffffffaa</color>
-      <origin>0 1</origin>
-      <pos>0.4 0.79</pos>
-      <size>0.20 0.025</size>
-    </image>
-    <image name="md_description-container-guide" extra="true">
-      <visible>${systemTurnOnGuides}</visible>
-      <path>${systemWhiteImage}</path>
-      <color>ffffffaa</color>
-      <origin>0 1</origin>
-      <pos>0.4 0.90</pos>
-      <size>0.50 0.10</size>
-    </image>
-    <image name="md_players-container-guide" extra="true">
-      <visible>${systemTurnOnGuides}</visible>
-      <path>${systemWhiteImage}</path>
-      <color>ffffffaa</color>
-      <origin>1 1</origin>
-      <pos>0.90 0.762</pos>
-      <size>0.20 0.025</size>
-    </image>
-    <image name="md_rating-container-guide" extra="true">
-      <visible>${systemTurnOnGuides}</visible>
-      <path>${systemWhiteImage}</path>
-      <color>ffffffaa</color>
-      <origin>1 1</origin>
-      <pos>0.90 0.79</pos>
-      <size>0.20 0.025</size>
-    </image>
-    <!-- END: Content Guides -->
-
-    <!-- START: Metadata -->
     <image name="md_genre-icon" extra="true">
       <visible>${viewMetadata}</visible>
       <path>${themeFolderArt}/icons/game-controller.svg</path>
       <color>${themeColorMuted}</color>
       <origin>0 1</origin>
-      <pos>0.4 0.762</pos>
+      <pos>0.4 0.732</pos>
       <maxSize>0.20 0.025</maxSize>
       <zIndex>20</zIndex>
     </image>
@@ -246,16 +223,57 @@
       <lineSpacing>1</lineSpacing>
       <alignment>left</alignment>
       <origin>0 1</origin>
-      <pos>0.42 0.762</pos>
+      <pos>0.42 0.732</pos>
       <size>0.35 0.025</size>
     </text>
 
+    <image name="md_players-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffff50</color>
+      <origin>1 1</origin>
+      <pos>0.90 0.732</pos>
+      <size>0.20 0.025</size>
+    </image>
+    <image name="md_players-icon" extra="true">
+      <visible>${viewMetadata}</visible>
+      <path>${themeFolderArt}/icons/players.svg</path>
+      <color>${themeColorMuted}</color>
+      <origin>0 1</origin>
+      <pos>0.828 0.729</pos>
+      <maxSize>0.20 0.020</maxSize>
+      <zIndex>20</zIndex>
+    </image>
+    <text name="md_lbl_players">
+      <color>${themeColorMuted}</color>
+      <alignment>right</alignment>
+      <origin>1 1</origin>
+      <pos>0.885 0.732</pos>
+      <size>0.20 0.025</size>
+    </text>
+    <text name="md_players">
+      <color>${themeColorMuted}</color>
+      <lineSpacing>1</lineSpacing>
+      <alignment>right</alignment>
+      <origin>1 1</origin>
+      <pos>0.895 0.732</pos>
+      <size>0.20 0.025</size>
+    </text>
+
+    <image name="md_developer-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffff50</color>
+      <origin>0 1</origin>
+      <pos>0.4 0.76</pos>
+      <size>0.20 0.025</size>
+    </image>
     <image name="md_developer-icon" extra="true">
       <visible>${viewMetadata}</visible>
       <path>${themeFolderArt}/icons/processor.svg</path>
       <color>${themeColorMuted}</color>
       <origin>0 1</origin>
-      <pos>0.4 0.79</pos>
+      <pos>0.4 0.76</pos>
       <maxSize>0.20 0.025</maxSize>
       <zIndex>20</zIndex>
     </image>
@@ -264,49 +282,42 @@
       <lineSpacing>1</lineSpacing>
       <alignment>left</alignment>
       <origin>0 1</origin>
-      <pos>0.42 0.79</pos>
+      <pos>0.42 0.76</pos>
       <size>0.20 0.03</size>
     </text>
 
-    <rating name="md_rating">
-      <color>${themeColorAccent}</color>
+    <image name="md_rating-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffff50</color>
       <origin>1 1</origin>
-      <pos>0.90 0.79</pos>
+      <pos>0.90 0.76</pos>
+      <size>0.20 0.025</size>
+    </image>
+    <rating name="md_rating">
+      <color>${themeColorMuted}</color>
+      <origin>1 1</origin>
+      <pos>0.90 0.76</pos>
       <size>auto 0.020</size>
     </rating>
-
-    <image name="md_players-icon" extra="true">
-      <visible>${viewMetadata}</visible>
-      <path>${themeFolderArt}/icons/players.svg</path>
-      <color>${themeColorMuted}</color>
-      <origin>0 1</origin>
-      <pos>0.828 0.759</pos>
-      <maxSize>0.20 0.020</maxSize>
-      <zIndex>20</zIndex>
-    </image>
-    <text name="md_lbl_players">
-      <color>${themeColorMuted}</color>
-      <alignment>right</alignment>
-      <origin>1 1</origin>
-      <pos>0.885 0.762</pos>
-      <size>0.20 0.025</size>
-    </text>
-    <text name="md_players">
-      <color>${themeColorMuted}</color>
-      <lineSpacing>1</lineSpacing>
-      <alignment>right</alignment>
-      <origin>1 1</origin>
-      <pos>0.895 0.762</pos>
-      <size>0.20 0.025</size>
-    </text>
     <!-- END: Metadata -->
 
+    <!-- START: Game Description -->
+    <image name="md_description-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffff50</color>
+      <origin>0 1</origin>
+      <pos>0.4 0.88</pos>
+      <size>0.50 0.10</size>
+    </image>
     <text name="md_description">
       <alignment>left</alignment>
       <origin>0 1</origin>
-      <pos>0.4 0.90</pos>
+      <pos>0.4 0.88</pos>
       <size>0.50 0.10</size>
     </text>
+    <!-- END: Game Description -->
     <!-- END: Main Content Area -->
   </view>
 
@@ -322,7 +333,6 @@
       <fontSize>${themeFontSizeText}</fontSize>
       <color>${themeColorText}</color>
       <forceUppercase>0</forceUppercase>
-      <alignment>left</alignment>
     </text>
   </view>
 </theme>

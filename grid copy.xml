@@ -17,7 +17,7 @@
     <image name="md_name-container-guide" extra="true">
       <visible>${systemTurnOnGuides}</visible>
       <path>${systemWhiteImage}</path>
-      <color>ffffffaa</color>
+      <color>ffffff50</color>
       <size>0.75 0.064</size>
       <origin>1 0.5</origin>
       <pos>0.95 0.09</pos>
@@ -69,7 +69,7 @@
     <!-- <image name="md_marquee-container-guide" extra="true">
       <visible>${systemTurnOnGuides}</visible>
       <path>${systemWhiteImage}</path>
-      <color>ffffffaa</color>
+      <color>ffffff50</color>
       <size>0.25 0.20</size>
       <origin>0 1</origin>
       <pos>0.05 0.45</pos>

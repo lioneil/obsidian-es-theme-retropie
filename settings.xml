@@ -9,6 +9,20 @@
     -->
 		<mdImageType>screenshot</mdImageType>
 
+
+    <!--
+    Values only availble in Grid layout:
+    plex     - Grid layout similar to Plex or Netflix (circa 2020s - 2024)
+    artbook  - Grid layout with a sidebar of metadata of currently selected game.
+    -->
+    <gridLayoutType>plex</gridLayoutType>
+    <!--
+    Values only availble in Grid layout:
+    video   - Play the video instead of showing an image.
+    image   - Show image (from screenshot folder) and turn off video playback.
+    -->
+    <gridLayoutMediaType>image</gridLayoutMediaType>
+
     <!--
     Available values:
     true     - Gamelist view style detailed and video will have full metadata.

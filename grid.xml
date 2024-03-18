@@ -1,5 +1,6 @@
 <theme>
   <formatVersion>6</formatVersion>
+  <include>./partials/grid-${gridLayoutType}-${gridLayoutMediaType}.xml</include>
 
   <variables>
     <gridWidth>0.90</gridWidth>
@@ -44,21 +45,29 @@
   </variables>
 
   <view name="grid">
-    <image name="logo">
-      <visible>false</visible>
+    <image name="logo-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffff50</color>
       <origin>0 0.5</origin>
-      <pos>0.05 0.09</pos>
-      <maxSize>0.12 0.08</maxSize>
+      <pos>0.05 0.12</pos>
+      <size>0.08 0.05</size>
+    </image>
+    <image name="logo">
+      <visible>true</visible>
+      <origin>0 0.5</origin>
+      <pos>0.05 0.12</pos>
+      <maxSize>0.08 0.05</maxSize>
     </image>
 
     <!-- START: Details metadata -->
     <image name="md_name-container-guide" extra="true">
       <visible>${systemTurnOnGuides}</visible>
       <path>${systemWhiteImage}</path>
-      <color>ffffffaa</color>
-      <size>0.30 0.10</size>
+      <color>ffffff50</color>
+      <size>0.30 0.15</size>
       <origin>0 1</origin>
-      <pos>0.05 0.345</pos>
+      <pos>0.05 0.30</pos>
     </image>
     <text name="md_name">
       <fontSize>${themeFontSizeTitle}</fontSize>
@@ -67,41 +76,81 @@
       <alignment>left</alignment>
       <size>0.75 0.068</size>
       <origin>0 1</origin>
-      <pos>0.05 0.345</pos>
+      <pos>0.05 0.30</pos>
     </text>
-
     <image name="md_marquee">
-      <maxSize>0.30 0.10</maxSize>
+      <maxSize>0.30 0.15</maxSize>
       <origin>0 1</origin>
-      <pos>0.05 0.345</pos>
+      <pos>0.05 0.30</pos>
     </image>
-
-    <!-- START: Genre -->
-    <image name="md_genre-container-guide" extra="true">
-      <pos>0.05 0.375</pos>
-    </image>
-    <image name="md_genre-icon" extra="true">
-      <color>${themeColorMuted}</color>
-      <pos>0.05 0.375</pos>
-    </image>
-    <text name="md_genre">
-      <alignment>left</alignment>
-      <origin>0 1</origin>
-      <pos>0.07 0.375</pos>
-    </text>
-    <!-- END: Genre -->
 
     <!-- START: Developer -->
     <image name="md_developer-container-guide" extra="true">
-      <pos>0.05 0.40</pos>
+      <pos>0.05 0.365</pos>
     </image>
     <image name="md_developer-icon" extra="true">
-      <pos>0.05 0.40</pos>
+      <color>${themeColorText}</color>
+      <pos>0.05 0.365</pos>
     </image>
     <text name="md_developer">
-      <pos>0.07 0.40</pos>
+      <color>${themeColorText}</color>
+      <pos>0.07 0.365</pos>
     </text>
     <!-- END: Developer -->
+
+    <!-- START: Rating -->
+    <image name="md_rating-container-guide" extra="true">
+      <origin>0 1</origin>
+      <pos>0.05 0.395</pos>
+      <size>0.085 0.025</size>
+    </image>
+    <rating name="md_rating">
+      <color>${themeColorText}</color>
+      <origin>0 1</origin>
+      <pos>0.05 0.395</pos>
+      <size>auto 0.025</size>
+    </rating>
+    <!-- END: Rating -->
+
+    <!-- START: Release date -->
+    <datetime name="md_releasedate">
+      <format>%Y</format>
+      <origin>0 1</origin>
+      <pos>0.145 0.395</pos>
+      <size>0.20 0.025</size>
+    </datetime>
+    <!-- END: Release date -->
+
+    <!-- START: Player count -->
+    <image name="md_players-container-guide" extra="true">
+      <visible>false</visible>
+    </image>
+    <image name="md_players-icon" extra="true">
+      <visible>false</visible>
+    </image>
+    <text name="md_lbl_players">
+      <visible>false</visible>
+    </text>
+    <text name="md_players">
+      <visible>false</visible>
+    </text>
+    <!-- END: Player count -->
+
+    <!-- START: Genre -->
+    <image name="md_genre-container-guide" extra="true">
+      <pos>0.185 0.395</pos>
+    </image>
+    <image name="md_genre-icon" extra="true">
+      <color>${themeColorText}</color>
+      <pos>0.185 0.395</pos>
+    </image>
+    <text name="md_genre">
+      <color>${themeColorText}</color>
+      <alignment>left</alignment>
+      <origin>0 1</origin>
+      <pos>0.205 0.395</pos>
+    </text>
+    <!-- END: Genre -->
 
     <image name="md_description-container-guide" extra="true">
       <origin>0 0</origin>
@@ -120,7 +169,7 @@
     <image name="gamegrid-container-guide" extra="true">
       <visible>${systemTurnOnGuides}</visible>
       <path>${systemWhiteImage}</path>
-      <color>ffffffaa</color>
+      <color>ffffff50</color>
       <size>${gridWidth} ${gridHeight}</size>
       <origin>0 0</origin>
       <pos>${gridPosition}</pos>
@@ -130,7 +179,7 @@
     <imagegrid name="gamegrid">
       <pos>${gridPosition}</pos>
       <autoLayout>${gridAutoLayout}</autoLayout>
-      <autoLayoutSelectedZoom >${gridAutoLayoutSelectedZoom}</autoLayoutSelectedZoom >
+      <autoLayoutSelectedZoom>${gridAutoLayoutSelectedZoom}</autoLayoutSelectedZoom>
       <size>${gridWidth} ${gridHeight}</size>
       <margin>0.005 0.005</margin>
       <padding>0 0</padding>
@@ -143,7 +192,6 @@
       <padding>0.010 0.010</padding>
       <backgroundCornerSize>0.010 0.010</backgroundCornerSize>
       <backgroundColor>${themeColorContentBackground}</backgroundColor>
-      <backgroundEdgeColor>${themeColorContentBackground}</backgroundEdgeColor>
     </gridtile>
 
     <gridtile name="selected">
@@ -152,43 +200,49 @@
     <!-- END: Gamegrid -->
 
     <!-- START: Background Image -->
-    <image name="md_image">
-      <visible>false</visible>
-      <zIndex>1</zIndex>
-      <origin>1 0</origin>
-      <pos>1 0</pos>
-      <maxSize>0.80 0.70</maxSize>
+    <image name="md_image-gradient-solid-left-container" extra="true">
+      <path>${systemWhiteImage}</path>
+      <color>${themeColorBackground}</color>
+      <size>0.20 1</size>
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+      <zIndex>2</zIndex>
     </image>
-    <video name="md_video">
-      <visible>true</visible>
-      <origin>1 0</origin>
-      <pos>1 0</pos>
-      <maxSize>0.80 0.70</maxSize>
-      <showSnapshotNoVideo>true</showSnapshotNoVideo>
-      <showSnapshotDelay>true</showSnapshotDelay>
-      <delay>3</delay>
-      <zIndex>1</zIndex>
-    </video>
+    <image name="md_image-gradient-solid-bottom-container" extra="true">
+      <path>${systemWhiteImage}</path>
+      <color>${themeColorBackground}</color>
+      <size>1 0.25</size>
+      <origin>1 1</origin>
+      <pos>1 1</pos>
+      <zIndex>2</zIndex>
+    </image>
     <image name="md_image-gradient-container" extra="true">
       <path>${themeFolderArt}/transparent-gradient.white.png</path>
       <color>${themeColorBackground}</color>
       <zIndex>2</zIndex>
       <origin>1 1</origin>
-      <pos>1 0.80</pos>
+      <pos>1 0.75</pos>
       <tile>false</tile>
-      <size>1 0.65</size>
+      <size>1 0.50</size>
+    </image>
+    <image name="md_image-gradient-left-right-container" extra="true">
+      <path>${themeFolderArt}/transparent-gradient.white.left-right.png</path>
+      <color>${themeColorBackground}</color>
+      <zIndex>2</zIndex>
+      <origin>0 0</origin>
+      <pos>0.20 0</pos>
+      <tile>false</tile>
+      <size>0.60 1</size>
     </image>
     <!-- END: Background Image -->
 
-    <!-- md_lbl_rating, md_lbl_releasedate,
-      md_lbl_developer, md_lbl_publisher,
-      md_publisher, md_lbl_genre,
-      md_lbl_lastplayed,
-      md_lbl_playcount, md_playcount, -->
-
-
     <!-- START: Overrides -->
-    <image name="md_marquee-container-guide, main-content-gradient-container">
+    <image name="
+      gamelist-container,
+      md_marquee-container-guide,
+      main-content-gradient-container,
+      main-content-gradient-solid-bottom-container
+    " extra="true">
       <visible>false</visible>
     </image>
     <!-- END: Overrides -->

@@ -1,0 +1,11 @@
+<theme>
+  <view name="grid">
+    <image name="md_image">
+      <visible>true</visible>
+      <zIndex>1</zIndex>
+      <origin>0.5 0.60</origin>
+      <pos>0.70 0.25</pos>
+      <maxSize>0.95 1.05</maxSize>
+    </image>
+  </view>
+</theme>
