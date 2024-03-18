@@ -34,7 +34,7 @@
       <selectedColor>${themeColorAccent}</selectedColor>
       <primaryColor>${themeColorMuted}</primaryColor>
       <secondaryColor>${themeColorText}</secondaryColor>
-      <scrollSound>${themeScrollSound}</scrollSound>
+      <scrollSound>${themeSoundScroll}</scrollSound>
     </textlist>
 
     <helpsystem name="help">
@@ -46,9 +46,268 @@
       <pos>0.5 0.95</pos>
     </helpsystem>
 
-    <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_developer, md_lbl_publisher, md_publisher, md_lbl_genre, md_genre, md_lbl_players, md_players, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_description, md_name">
+    <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_developer, md_lbl_publisher, md_publisher, md_lbl_genre, md_genre, md_lbl_players, md_players, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_name">
+      <fontSize>${themeFontSizeSubtitle}</fontSize>
+      <forceUppercase>0</forceUppercase>
+    </text>
+    <text name="
+      md_lbl_rating, md_lbl_releasedate,
+      md_lbl_developer, md_lbl_publisher,
+      md_publisher, md_lbl_genre,
+      md_lbl_lastplayed,
+      md_lbl_playcount, md_playcount,
+    ">
+      <origin>0 0</origin>
+      <pos>1 1</pos>
+      <visible>false</visible>
+    </text>
+
+    <text name="md_description">
       <fontSize>${themeFontSizeText}</fontSize>
       <forceUppercase>0</forceUppercase>
     </text>
+
+    <rating name="md_rating">
+      <filledPath>${themeFolderArt}/icons/star_filled.svg</filledPath>
+      <unfilledPath>${themeFolderArt}/icons/star_unfilled.svg</unfilledPath>
+    </rating>
+  </view>
+
+  <view name="basic, detailed, video, grid">
+    <text name="
+      md_lbl_rating, md_lbl_releasedate,
+      md_lbl_developer, md_developer, md_lbl_publisher,
+      md_publisher, md_lbl_genre, md_genre,
+      md_lbl_players, md_players, md_lbl_lastplayed,
+      md_lbl_playcount, md_playcount,
+      md_description, md_name
+    ">
+      <visible>${viewMetadata}</visible>
+      <pos>1 1</pos>
+    </text>
+
+    <datetime name="md_releasedate, md_lastplayed">
+      <visible>${viewMetadata}</visible>
+    </datetime>
+
+    <rating name="md_rating">
+      <visible>${viewMetadata}</visible>
+    </rating>
+
+    <image name="md_thumbnail">
+      <visible>${viewMetadata}</visible>
+    </image>
+  </view>
+
+  <view name="detailed, video">
+    <image name="md_thumbnail">
+      <visible>false</visible>
+    </image>
+
+    <text name="
+      md_lbl_rating, md_lbl_releasedate,
+      md_lbl_developer, md_developer, md_lbl_publisher,
+      md_publisher, md_lbl_genre, md_genre,
+      md_lbl_players, md_players, md_lbl_lastplayed,
+      md_lbl_playcount, md_playcount,
+      md_description, md_name
+    ">
+      <origin>0.5 0</origin>
+      <color>${themeColorText}</color>
+      <alignment>left</alignment>
+    </text>
+
+    <!-- START: Main Content Area -->
+    <image name="md_marquee">
+      <origin>0.5 1</origin>
+      <pos>0.65 0.71</pos>
+      <maxSize>0.25 0.20</maxSize>
+      <zIndex>10</zIndex>
+    </image>
+
+    <image name="main-content-gradient-container" extra="true">
+      <path>${themeFolderArt}/transparent-gradient.white.png</path>
+      <color>${themeColorContentBackground}</color>
+      <origin>0 1</origin>
+      <pos>0.30 1</pos>
+      <size>0.70 0.90</size>
+      <tile>false</tile>
+      <zIndex>3</zIndex>
+    </image>
+
+    <image name="marquee">
+      <visible>true</visible>
+      <origin>0.5 1</origin>
+      <pos>0.65 0.71</pos>
+      <maxSize>0.25 0.20</maxSize>
+      <zIndex>10</zIndex>
+    </image>
+    <!-- END: Main Content Area -->
+
+    <!-- START: Gamelist Area -->
+    <image name="logo">
+      <origin>0.5 0.5</origin>
+      <pos>0.15 0.09</pos>
+      <maxSize>0.12 0.08</maxSize>
+    </image>
+
+    <text name="logoText">
+      <text>${system.fullName}</text>
+      <origin>0.5 0.5</origin>
+      <pos>0.15 0.09</pos>
+      <alignment>center</alignment>
+    </text>
+
+    <textlist name="gamelist">
+      <origin>0 0</origin>
+      <pos>0 0.15</pos>
+      <size>0.3 0.75</size>
+      <alignment>right</alignment>
+      <horizontalMargin>0.03</horizontalMargin>
+    </textlist>
+
+    <image name="gamelist-container" extra="true">
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+      <size>0.3 1</size>
+      <path>${systemWhiteImage}</path>
+      <color>${themeColorBackground}</color>
+      <zIndex>4</zIndex>
+    </image>
+    <!-- END: Gamelist Area -->
+
+    <!-- START: Content Guides -->
+    <image name="md_marquee-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffffaa</color>
+      <origin>0.5 1</origin>
+      <pos>0.65 0.71</pos>
+      <size>0.25 0.20</size>
+    </image>
+    <image name="md_genre-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffffaa</color>
+      <origin>0 1</origin>
+      <pos>0.4 0.762</pos>
+      <size>0.35 0.025</size>
+    </image>
+    <image name="md_developer-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffffaa</color>
+      <origin>0 1</origin>
+      <pos>0.4 0.79</pos>
+      <size>0.20 0.025</size>
+    </image>
+    <image name="md_description-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffffaa</color>
+      <origin>0 1</origin>
+      <pos>0.4 0.90</pos>
+      <size>0.50 0.10</size>
+    </image>
+    <image name="md_players-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffffaa</color>
+      <origin>1 1</origin>
+      <pos>0.90 0.762</pos>
+      <size>0.20 0.025</size>
+    </image>
+    <image name="md_rating-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${systemWhiteImage}</path>
+      <color>ffffffaa</color>
+      <origin>1 1</origin>
+      <pos>0.90 0.79</pos>
+      <size>0.20 0.025</size>
+    </image>
+    <!-- END: Content Guides -->
+
+    <!-- START: Metadata -->
+    <image name="md_genre-icon" extra="true">
+      <visible>${viewMetadata}</visible>
+      <path>${themeFolderArt}/icons/game-controller.svg</path>
+      <color>${themeColorMuted}</color>
+      <origin>0 1</origin>
+      <pos>0.4 0.762</pos>
+      <maxSize>0.20 0.025</maxSize>
+      <zIndex>20</zIndex>
+    </image>
+    <text name="md_genre">
+      <color>${themeColorMuted}</color>
+      <lineSpacing>1</lineSpacing>
+      <alignment>left</alignment>
+      <origin>0 1</origin>
+      <pos>0.42 0.762</pos>
+      <size>0.35 0.025</size>
+    </text>
+
+    <image name="md_developer-icon" extra="true">
+      <visible>${viewMetadata}</visible>
+      <path>${themeFolderArt}/icons/processor.svg</path>
+      <color>${themeColorMuted}</color>
+      <origin>0 1</origin>
+      <pos>0.4 0.79</pos>
+      <maxSize>0.20 0.025</maxSize>
+      <zIndex>20</zIndex>
+    </image>
+    <text name="md_developer">
+      <color>${themeColorMuted}</color>
+      <lineSpacing>1</lineSpacing>
+      <alignment>left</alignment>
+      <origin>0 1</origin>
+      <pos>0.42 0.79</pos>
+      <size>0.20 0.03</size>
+    </text>
+
+    <rating name="md_rating">
+      <color>${themeColorAccent}</color>
+      <origin>1 1</origin>
+      <pos>0.90 0.79</pos>
+      <size>auto 0.020</size>
+    </rating>
+
+    <image name="md_players-icon" extra="true">
+      <visible>${viewMetadata}</visible>
+      <path>${themeFolderArt}/icons/players.svg</path>
+      <color>${themeColorMuted}</color>
+      <origin>0 1</origin>
+      <pos>0.828 0.759</pos>
+      <maxSize>0.20 0.020</maxSize>
+      <zIndex>20</zIndex>
+    </image>
+    <text name="md_lbl_players">
+      <color>${themeColorMuted}</color>
+      <alignment>right</alignment>
+      <origin>1 1</origin>
+      <pos>0.885 0.762</pos>
+      <size>0.20 0.025</size>
+    </text>
+    <text name="md_players">
+      <color>${themeColorMuted}</color>
+      <lineSpacing>1</lineSpacing>
+      <alignment>right</alignment>
+      <origin>1 1</origin>
+      <pos>0.895 0.762</pos>
+      <size>0.20 0.025</size>
+    </text>
+    <!-- END: Metadata -->
+
+    <text name="md_description">
+      <alignment>left</alignment>
+      <origin>0 1</origin>
+      <pos>0.4 0.90</pos>
+      <size>0.50 0.10</size>
+    </text>
+    <!-- END: Main Content Area -->
+
+    <helpsystem name="help">
+      <origin>0.5 1</origin>
+      <pos>0.65 0.95</pos>
+    </helpsystem>
   </view>
 </theme>
