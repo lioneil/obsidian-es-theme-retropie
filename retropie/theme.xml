@@ -1,8 +1,13 @@
 <theme>
   <formatVersion>6</formatVersion>
   <include>./../theme.xml</include>
+
   <variables>
     <themeArtFolder>./../assets/art</themeArtFolder>
+    <gridHeight>0.15</gridHeight>
+    <gridPosition>0.050 0.75</gridPosition>
+    <gridAutoLayout>9 1</gridAutoLayout>
+    <gridScrollDirection>horizontal</gridScrollDirection>
   </variables>
 
   <view name="detailed, video">
@@ -16,8 +21,41 @@
   </view>
 
   <view name="grid">
+    <text name="md_name">
+      <visible>true</visible>
+      <pos>0.05 0.405</pos>
+    </text>
+
+    <image name="md_image">
+      <visible>true</visible>
+      <origin>0.50 0.50</origin>
+      <pos>0.75 0.30</pos>
+      <size>0.25 0</size>
+      <zIndex>10</zIndex>
+    </image>
+
     <imagegrid name="gamegrid">
       <imageSource>thumbnail</imageSource>
     </imagegrid>
+
+    <text name="
+      md_lbl_rating,
+      md_lbl_releasedate,
+      md_lbl_lastplayed,
+      md_lbl_publisher, md_publisher,
+      md_genre-icon, md_lbl_genre, md_genre,
+      md_lbl_playcount, md_playcount,
+      md_developer-icon, md_developer, md_lbl_developer,
+    ">
+      <visible>false</visible>
+    </text>
+
+    <datetime name="md_releasedate">
+      <visible>false</visible>
+    </datetime>
+
+    <rating name="md_rating">
+      <visible>false</visible>
+    </rating>
   </view>
 </theme>
