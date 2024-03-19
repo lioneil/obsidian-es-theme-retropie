@@ -21,5 +21,13 @@
     <video name="md_video">
       <visible>false</visible>
     </video>
+
+    <image name="
+      md_genre-icon,
+      md_developer-icon,
+      md_players-icon,
+    ">
+      <visible>false</visible>
+    </image>
   </view>
 </theme>

@@ -1,0 +1,12 @@
+<theme>
+  <formatVersion>6</formatVersion>
+
+  <view name="basic, detailed, video, grid">
+    <image name="
+      main-content-gradient-container,
+      main-content-gradient-solid-bottom-container,
+    " extra="true">
+      <visible>false</visible>
+    </image>
+  </view>
+</theme>

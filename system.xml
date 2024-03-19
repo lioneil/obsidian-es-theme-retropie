@@ -2,6 +2,10 @@
   <include>./variables.xml</include>
 
   <view name="system">
+    <image name="background" extra="true">
+      <color>${themeColorBackground}</color>
+    </image>
+
     <carousel name="systemcarousel">
       <type>horizontal</type>
       <color>${themeColorTransparent}</color>

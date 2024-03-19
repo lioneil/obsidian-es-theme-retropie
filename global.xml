@@ -3,7 +3,7 @@
 
   <view name="system, basic, detailed, video, grid">
     <image name="background" extra="true">
-      <color>${themeColorBackground}</color>
+      <color>${themeColorContentBackground}</color>
       <path>${systemWhiteImage}</path>
       <size>1 1</size>
       <origin>0 0</origin>
@@ -186,7 +186,7 @@
       <color>${themeColorContentBackground}</color>
       <origin>0 1</origin>
       <pos>0.30 1</pos>
-      <size>0.70 0.25</size>
+      <size>0.70 0.15</size>
       <tile>false</tile>
       <zIndex>3</zIndex>
     </image>
@@ -312,6 +312,9 @@
       <size>0.50 0.10</size>
     </image>
     <text name="md_description">
+      <fontSize>${themeFontSizeText}</fontSize>
+      <color>${themeColorText}</color>
+      <forceUppercase>0</forceUppercase>
       <alignment>left</alignment>
       <origin>0 1</origin>
       <pos>0.4 0.88</pos>
@@ -326,13 +329,5 @@
       <origin>0.5 1</origin>
       <pos>0.65 0.95</pos>
     </helpsystem>
-  </view>
-
-  <view name="detailed, video, grid">
-    <text name="md_description">
-      <fontSize>${themeFontSizeText}</fontSize>
-      <color>${themeColorText}</color>
-      <forceUppercase>0</forceUppercase>
-    </text>
   </view>
 </theme>

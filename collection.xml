@@ -2,7 +2,7 @@
   <formatVersion>6</formatVersion>
   <include>./theme.xml</include>
 
-  <view name="system, basic, detailed, video, grid">
+  <view name="system, detailed, video, grid">
     <image name="logo">
       <path>${system.theme}/marquee.png</path>
     </image>

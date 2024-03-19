@@ -1,6 +1,8 @@
 <theme>
   <formatVersion>6</formatVersion>
   <include>./../theme.xml</include>
+  <include>./../partials/hide-metadata.xml</include>
+  <include>./../partials/hide-gradients.xml</include>
 
   <variables>
     <themeArtFolder>./../assets/art</themeArtFolder>
@@ -18,6 +20,20 @@
       <size>0.25 0</size>
       <zIndex>10</zIndex>
     </image>
+
+    <text name="md_name">
+      <visible>true</visible>
+      <fontSize>${themeFontSizeTitle}</fontSize>
+      <pos>0.40 0.705</pos>
+      <alignment>left</alignment>
+      <origin>0 0</origin>
+      <size>0.55 0</size>
+      <zIndex>10</zIndex>
+    </text>
+
+    <text name="md_description">
+      <visible>true</visible>
+    </text>
   </view>
 
   <view name="grid">
@@ -37,25 +53,5 @@
     <imagegrid name="gamegrid">
       <imageSource>thumbnail</imageSource>
     </imagegrid>
-
-    <text name="
-      md_lbl_rating,
-      md_lbl_releasedate,
-      md_lbl_lastplayed,
-      md_lbl_publisher, md_publisher,
-      md_genre-icon, md_lbl_genre, md_genre,
-      md_lbl_playcount, md_playcount,
-      md_developer-icon, md_developer, md_lbl_developer,
-    ">
-      <visible>false</visible>
-    </text>
-
-    <datetime name="md_releasedate">
-      <visible>false</visible>
-    </datetime>
-
-    <rating name="md_rating">
-      <visible>false</visible>
-    </rating>
   </view>
 </theme>
