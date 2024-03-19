@@ -12,16 +12,12 @@
 
     <!--
     Values only availble in Grid layout:
-    plex     - Grid layout similar to Plex or Netflix (circa 2020s - 2024)
-    artbook  - Grid layout with a sidebar of metadata of currently selected game.
+    plex-image     - Grid layout similar to Plex or Netflix (circa 2020s - 2024)
+    plex-video     - Play the video instead of showing an image
+    artbook        - Grid layout with a sidebar of metadata of currently selected game.
+    simple         - Grid layout, straight up, no metadata no video, marquee
     -->
-    <gridLayoutType>plex</gridLayoutType>
-    <!--
-    Values only availble in Grid layout:
-    video   - Play the video instead of showing an image.
-    image   - Show image (from screenshot folder) and turn off video playback.
-    -->
-    <gridLayoutMediaType>image</gridLayoutMediaType>
+    <gridLayoutType>simple</gridLayoutType>
 
     <!--
     Available values:

@@ -1,4 +1,10 @@
 <theme>
   <formatVersion>6</formatVersion>
   <include>./../collection.xml</include>
+
+  <view name="grid">
+    <image name="md_image">
+      <size>0.50 0.60</size>
+    </image>
+  </view>
 </theme>

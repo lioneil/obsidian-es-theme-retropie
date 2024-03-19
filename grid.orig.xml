@@ -1,6 +1,6 @@
 <theme>
   <formatVersion>6</formatVersion>
-  <include>./partials/grid-${gridLayoutType}.xml</include>
+  <include>./partials/grid-${gridLayoutType}-${gridLayoutMediaType}.xml</include>
 
   <variables>
     <gridWidth>0.90</gridWidth>
@@ -72,13 +72,14 @@
     <text name="md_name">
       <fontSize>${themeFontSizeTitle}</fontSize>
       <color>${themeColorText}</color>
-      <visible>false</visible>
+      <visible>true</visible>
       <alignment>left</alignment>
       <size>0.75 0.068</size>
       <origin>0 1</origin>
       <pos>0.05 0.30</pos>
     </text>
     <image name="md_marquee">
+      <visible>false</visible>
       <maxSize>0.30 0.15</maxSize>
       <origin>0 1</origin>
       <pos>0.05 0.30</pos>
@@ -155,14 +156,14 @@
     <image name="md_description-container-guide" extra="true">
       <origin>0 0</origin>
       <pos>0.05 0.405</pos>
-      <size>0.45 0.10</size>
+      <size>0.50 0.10</size>
     </image>
     <text name="md_description">
       <visible>true</visible>
       <alignment>left</alignment>
       <origin>0 0</origin>
       <pos>0.05 0.405</pos>
-      <size>0.45 0.10</size>
+      <size>0.50 0.10</size>
     </text>
     <!-- END: Details metadata -->
 
@@ -185,13 +186,13 @@
       <padding>0 0</padding>
       <scrollDirection>${gridScrollDirection}</scrollDirection>
       <animate>true</animate>
-      <imageSource>marquee</imageSource>
+      <imageSource>thumbnail</imageSource>
     </imagegrid>
 
     <gridtile name="default">
       <padding>0.010 0.010</padding>
       <backgroundCornerSize>0.010 0.010</backgroundCornerSize>
-      <backgroundColor>${themeColorContentBackground}aa</backgroundColor>
+      <backgroundColor>${themeColorContentBackground}</backgroundColor>
     </gridtile>
 
     <gridtile name="selected">
@@ -199,15 +200,42 @@
     </gridtile>
     <!-- END: Gamegrid -->
 
+    <!-- START: Background Image -->
+    <image name="md_image-gradient-solid-left-container" extra="true">
+      <path>${systemWhiteImage}</path>
+      <color>${themeColorBackground}</color>
+      <size>0.20 1</size>
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+      <zIndex>2</zIndex>
+    </image>
+    <image name="md_image-gradient-solid-bottom-container" extra="true">
+      <path>${systemWhiteImage}</path>
+      <color>${themeColorBackground}</color>
+      <size>1 0.25</size>
+      <origin>1 1</origin>
+      <pos>1 1</pos>
+      <zIndex>2</zIndex>
+    </image>
     <image name="md_image-gradient-container" extra="true">
       <path>${themeFolderArt}/transparent-gradient.white.png</path>
       <color>${themeColorBackground}</color>
       <zIndex>2</zIndex>
       <origin>1 1</origin>
-      <pos>1 0.70</pos>
-      <tile>true</tile>
-      <size>1 0.80</size>
+      <pos>1 0.75</pos>
+      <tile>false</tile>
+      <size>1 0.50</size>
     </image>
+    <image name="md_image-gradient-left-right-container" extra="true">
+      <path>${themeFolderArt}/transparent-gradient.white.left-right.png</path>
+      <color>${themeColorBackground}</color>
+      <zIndex>2</zIndex>
+      <origin>0 0</origin>
+      <pos>0.20 0</pos>
+      <tile>false</tile>
+      <size>0.60 1</size>
+    </image>
+    <!-- END: Background Image -->
 
     <!-- START: Overrides -->
     <image name="
@@ -216,7 +244,6 @@
       main-content-gradient-container,
       main-content-gradient-solid-bottom-container
     " extra="true">
-      <color>ff0000</color>
       <visible>false</visible>
     </image>
     <!-- END: Overrides -->

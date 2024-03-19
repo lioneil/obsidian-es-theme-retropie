@@ -53,5 +53,9 @@
     <imagegrid name="gamegrid">
       <imageSource>thumbnail</imageSource>
     </imagegrid>
+
+    <text name="md_description">
+      <visible>true</visible>
+    </text>
   </view>
 </theme>

@@ -2,8 +2,8 @@
   <formatVersion>6</formatVersion>
 
   <view name="system, basic, detailed, video, grid">
-    <image name="background" extra="true">
-      <color>${themeColorContentBackground}</color>
+    <image name="background">
+      <color>${themeColorBackground}</color>
       <path>${systemWhiteImage}</path>
       <size>1 1</size>
       <origin>0 0</origin>
