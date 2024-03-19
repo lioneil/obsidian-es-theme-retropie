@@ -1,6 +1,21 @@
 <theme>
   <formatVersion>6</formatVersion>
 
+  <!--
+  PERFORMANCE NOTE:
+  ======================
+  Videos are not that compatible with Raspberry Pi's. It is what it is.
+  If you still want to choose video as the view layout, please turn OFF OMX Player.
+
+  If OMX Player is turned on, zIndex values are ignored. In the case of this theme,
+  the video will play on top of everything else (marquee, description, metadata).
+
+  Please remember, when you turn off OMX Player and played a bunch of videos,
+  Your Pi might overheat.
+
+  This issue is only present in Raspberry Pi's (or maybe SBCs in general), as far as I know.
+  -->
+
   <variables>
     <gamelistSidebarWidth>0.3</gamelistSidebarWidth>
     <mainContentWidth>0.7</mainContentWidth>
