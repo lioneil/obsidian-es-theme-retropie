@@ -1,0 +1,52 @@
+<theme>
+  <formatVersion>6</formatVersion>
+  <include>./grid-default.xml</include>
+
+  <variables>
+    <gridThemeFolderArt>./../assets/art</gridThemeFolderArt>
+  </variables>
+
+  <view name="grid">
+    <imagegrid name="gamegrid">
+      <imageSource>thumbnail</imageSource>
+    </imagegrid>
+
+    <text name="md_name">
+      <color>969696</color>
+      <fontSize>0.78</fontSize>
+      <visible>true</visible>
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+    </text>
+
+    <image name="md_image">
+      <visible>true</visible>
+      <zIndex>1</zIndex>
+      <origin>0 0</origin>
+      <pos>0.48 0</pos>
+      <size>0.52 0.70</size>
+    </image>
+
+    <image name="md_image-gradient-bottom-top-container" extra="true">
+      <path>./${gridThemeFolderArt}/transparent-gradient.white.bottom-top.png</path>
+      <color>${themeColorBackground}</color>
+      <zIndex>2</zIndex>
+      <origin>1 1</origin>
+      <pos>1 0.75</pos>
+      <tile>false</tile>
+      <size>0.52 0.30</size>
+    </image>
+
+    <image name="md_image-gradient-left-right-container" extra="true">
+      <path>${gridThemeFolderArt}/transparent-gradient.white.bottom-top.png</path>
+      <color>${themeColorBackground}</color>
+      <!-- <color>ff0000</color> -->
+      <zIndex>2</zIndex>
+      <origin>0 0</origin>
+      <pos>0.150 0</pos>
+      <tile>false</tile>
+      <size>0.80 0.30</size>
+      <rotation>90.0</rotation>
+    </image>
+  </view>
+</theme>

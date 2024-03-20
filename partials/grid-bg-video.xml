@@ -1,0 +1,21 @@
+<theme>
+  <include>./grid-bg-image.xml</include>
+  <include>./grid-default.xml</include>
+
+  <view name="grid">
+    <image name="md_image">
+      <visible>true</visible>
+    </image>
+
+    <video name="md_video">
+      <visible>true</visible>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <delay>2.5</delay>
+      <zIndex>1</zIndex>
+      <origin>0 0</origin>
+      <pos>0.48 0</pos>
+      <size>0.52 0.70</size>
+    </video>
+  </view>
+</theme>

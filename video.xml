@@ -16,21 +16,31 @@
   This issue is only present in Raspberry Pi's (or maybe SBCs in general), as far as I know.
   -->
 
-  <variables>
-    <gamelistSidebarWidth>0.3</gamelistSidebarWidth>
-    <mainContentWidth>0.7</mainContentWidth>
-  </variables>
-
   <view name="video">
     <image name="md_marquee">
       <visible>true</visible>
+      <pos>0.65 0.70</pos>
+    </image>
+
+    <!--
+    Recommended image size is
+    304x224
+    -->
+    <image name="md_image">
+      <origin>1 0</origin>
+      <pos>1 0</pos>
+      <!-- <maxSize>0.7 1</maxSize> -->
+      <size>0.70 0.846</size>
+      <visible>true</visible>
+      <zIndex>1</zIndex>
     </image>
 
     <video name="md_video">
       <origin>0 0</origin>
       <pos>0.30 0</pos>
-      <size>0.7 1</size>
+      <maxSize>0.7 0.9</maxSize>
       <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <delay>2.5</delay>
       <zIndex>2</zIndex>
     </video>
   </view>

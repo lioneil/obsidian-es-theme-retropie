@@ -17,7 +17,7 @@
     </image>
 
     <text name="logoText, md_name">
-      <fontPath>${themeFont}</fontPath>
+      <fontPath>${themeFontAlternative}</fontPath>
     </text>
 
     <text name="logoText">
@@ -75,6 +75,22 @@
       <filledPath>${themeFolderArt}/icons/star_filled.svg</filledPath>
       <unfilledPath>${themeFolderArt}/icons/star_unfilled.svg</unfilledPath>
     </rating>
+
+    <text name="
+      md_genre-icon, md_lbl_genre, md_genre,
+      md_developer-icon, md_lbl_developer, md_developer,
+      md_players-icon, md_lbl_players, md_players,
+      md_releasedate-icon, md_lbl_releasedate,
+      md_lbl_lastplayed, md_lbl_playcount, md_playcount,
+    ">
+      <color>${themeColorMuted}</color>
+    </text>
+    <datetime name="
+      md_releasedate,
+      md_lastplayed
+    ">
+      <color>${themeColorMuted}</color>
+    </datetime>
   </view>
 
   <view name="basic, detailed, video, grid">
@@ -92,7 +108,6 @@
 
     <datetime name="md_releasedate, md_lastplayed">
       <fontSize>${themeFontSizeSubtitle}</fontSize>
-      <color>${themeColorText}</color>
       <visible>${viewMetadata}</visible>
     </datetime>
 
@@ -286,20 +301,37 @@
       <size>0.20 0.03</size>
     </text>
 
+    <!-- START: Rating -->
     <image name="md_rating-container-guide" extra="true">
       <visible>${systemTurnOnGuides}</visible>
       <path>${systemWhiteImage}</path>
       <color>ffffff50</color>
       <origin>1 1</origin>
-      <pos>0.90 0.76</pos>
+      <pos>0.90 0.705</pos>
       <size>0.20 0.025</size>
     </image>
     <rating name="md_rating">
       <color>${themeColorMuted}</color>
       <origin>1 1</origin>
-      <pos>0.90 0.76</pos>
+      <color>${themeColorAccent}</color>
+      <pos>0.90 0.705</pos>
       <size>auto 0.020</size>
     </rating>
+    <!-- END: Rating -->
+
+    <image name="md_releasedate-icon" extra="true">
+      <visible>${viewMetadata}</visible>
+      <path>${themeFolderArt}/icons/calendar.svg</path>
+      <origin>0 1</origin>
+      <pos>0.40 0.707</pos>
+      <maxSize>0.20 0.025</maxSize>
+    </image>
+    <datetime name="md_releasedate">
+      <format>%Y</format>
+      <origin>0 1</origin>
+      <pos>0.42 0.707</pos>
+      <size>0.20 0.025</size>
+    </datetime>
     <!-- END: Metadata -->
 
     <!-- START: Game Description -->

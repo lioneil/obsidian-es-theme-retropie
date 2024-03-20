@@ -2,169 +2,17 @@
   <formatVersion>6</formatVersion>
   <include>./partials/grid-${gridLayoutType}.xml</include>
 
-  <variables>
-    <gridWidth>0.90</gridWidth>
-    <gridHeight>0.35</gridHeight>
-    <gridPosition>0.050 0.55</gridPosition>
-
-    <!--
-    example:
-    row is 5
-    column is 4
-    will create a grid like:
-    .  .  .  .  .  .
-    .  .  .  .  .  .
-    .  .  .  .  .  .
-    .  .  .  .  .  .
-    .  .  .  .  .  .
-    -->
-    <gridAutoLayout>6 2</gridAutoLayout>
-    <gridAutoLayoutSelectedZoom>1.18</gridAutoLayoutSelectedZoom>
-
-    <!--
-    Available values:
-    vertical     - more intuitive order from left to right, then top to bottom.
-    horizontal   - the tiles are ordered from top to bottom, then from left to right.
-    -->
-    <gridScrollDirection>vertical</gridScrollDirection>
-
-    <!--
-    Should be gridWidth / desired tiles in row
-    example:
-    gridWidth is 0.90 and I want 5 tiles in a row
-    gridTileWidth = gridWidth / 5
-    -->
-    <gridTileWidth>0.18</gridTileWidth>
-    <!--
-    Same as gridWidth but with gridHeight and desired tiles column
-    example:
-    gridHeight is 0.75 and I want 4 tiles in a row
-    gridTileHeight = gridHeight / 4
-    -->
-    <gridTileHeight>0.1875</gridTileHeight>
-  </variables>
-
   <view name="grid">
-    <image name="logo-container-guide" extra="true">
-      <visible>${systemTurnOnGuides}</visible>
-      <path>${systemWhiteImage}</path>
-      <color>ffffff50</color>
-      <origin>0 0.5</origin>
-      <pos>0.05 0.12</pos>
-      <size>0.08 0.05</size>
-    </image>
-    <image name="logo">
-      <visible>true</visible>
-      <origin>0 0.5</origin>
-      <pos>0.05 0.12</pos>
-      <maxSize>0.08 0.05</maxSize>
-    </image>
-
     <!-- START: Details metadata -->
     <image name="md_name-container-guide" extra="true">
       <visible>${systemTurnOnGuides}</visible>
       <path>${systemWhiteImage}</path>
       <color>ffffff50</color>
-      <size>0.30 0.15</size>
-      <origin>0 1</origin>
-      <pos>0.05 0.30</pos>
     </image>
     <text name="md_name">
       <fontSize>${themeFontSizeTitle}</fontSize>
       <color>${themeColorText}</color>
-      <visible>false</visible>
-      <alignment>left</alignment>
-      <size>0.75 0.068</size>
-      <origin>0 1</origin>
-      <pos>0.05 0.30</pos>
     </text>
-    <image name="md_marquee">
-      <maxSize>0.30 0.15</maxSize>
-      <origin>0 1</origin>
-      <pos>0.05 0.30</pos>
-    </image>
-
-    <!-- START: Developer -->
-    <image name="md_developer-container-guide" extra="true">
-      <pos>0.05 0.365</pos>
-    </image>
-    <image name="md_developer-icon" extra="true">
-      <color>${themeColorText}</color>
-      <pos>0.05 0.365</pos>
-    </image>
-    <text name="md_developer">
-      <color>${themeColorText}</color>
-      <pos>0.07 0.365</pos>
-    </text>
-    <!-- END: Developer -->
-
-    <!-- START: Rating -->
-    <image name="md_rating-container-guide" extra="true">
-      <origin>0 1</origin>
-      <pos>0.05 0.395</pos>
-      <size>0.085 0.025</size>
-    </image>
-    <rating name="md_rating">
-      <color>${themeColorText}</color>
-      <origin>0 1</origin>
-      <pos>0.05 0.395</pos>
-      <size>auto 0.025</size>
-    </rating>
-    <!-- END: Rating -->
-
-    <!-- START: Release date -->
-    <datetime name="md_releasedate">
-      <format>%Y</format>
-      <origin>0 1</origin>
-      <pos>0.140 0.395</pos>
-      <size>0.20 0.025</size>
-    </datetime>
-    <!-- END: Release date -->
-
-    <!-- START: Player count -->
-    <image name="md_players-container-guide" extra="true">
-      <visible>false</visible>
-    </image>
-    <image name="md_players-icon" extra="true">
-      <visible>false</visible>
-    </image>
-    <text name="md_lbl_players">
-      <visible>false</visible>
-    </text>
-    <text name="md_players">
-      <visible>false</visible>
-    </text>
-    <!-- END: Player count -->
-
-    <!-- START: Genre -->
-    <image name="md_genre-container-guide" extra="true">
-      <pos>0.185 0.395</pos>
-    </image>
-    <image name="md_genre-icon" extra="true">
-      <color>${themeColorText}</color>
-      <pos>0.185 0.395</pos>
-    </image>
-    <text name="md_genre">
-      <color>${themeColorText}</color>
-      <alignment>left</alignment>
-      <origin>0 1</origin>
-      <pos>0.205 0.395</pos>
-    </text>
-    <!-- END: Genre -->
-
-    <image name="md_description-container-guide" extra="true">
-      <origin>0 0</origin>
-      <pos>0.05 0.405</pos>
-      <size>0.45 0.10</size>
-    </image>
-    <text name="md_description">
-      <visible>true</visible>
-      <alignment>left</alignment>
-      <origin>0 0</origin>
-      <pos>0.05 0.405</pos>
-      <size>0.45 0.10</size>
-    </text>
-    <!-- END: Details metadata -->
 
     <image name="gamegrid-container-guide" extra="true">
       <visible>${systemTurnOnGuides}</visible>
@@ -181,49 +29,25 @@
       <autoLayout>${gridAutoLayout}</autoLayout>
       <autoLayoutSelectedZoom>${gridAutoLayoutSelectedZoom}</autoLayoutSelectedZoom>
       <size>${gridWidth} ${gridHeight}</size>
-      <margin>0.005 0.005</margin>
-      <padding>0 0</padding>
+      <margin>${gridMargin}</margin>
+      <padding>${gridPadding}</padding>
       <scrollDirection>${gridScrollDirection}</scrollDirection>
+      <scrollLoop>${gridScrollLoop}</scrollLoop>
+      <centerSelection>${gridScrollLoop}</centerSelection>
       <animate>true</animate>
-      <imageSource>marquee</imageSource>
     </imagegrid>
 
     <gridtile name="default">
       <padding>0.010 0.010</padding>
       <backgroundCornerSize>0.010 0.010</backgroundCornerSize>
-      <backgroundColor>${themeColorContentBackground}aa</backgroundColor>
+      <backgroundColor>${themeColorContentBackground}88</backgroundColor>
     </gridtile>
 
     <gridtile name="selected">
+      <padding>0.010 0.010</padding>
+      <backgroundCornerSize>0.010 0.010</backgroundCornerSize>
       <backgroundColor>${themeColorAccent}</backgroundColor>
     </gridtile>
     <!-- END: Gamegrid -->
-
-    <image name="md_image-gradient-container" extra="true">
-      <path>${themeFolderArt}/transparent-gradient.white.png</path>
-      <color>${themeColorBackground}</color>
-      <zIndex>2</zIndex>
-      <origin>1 1</origin>
-      <pos>1 0.70</pos>
-      <tile>true</tile>
-      <size>1 0.80</size>
-    </image>
-
-    <!-- START: Overrides -->
-    <image name="
-      gamelist-container,
-      md_marquee-container-guide,
-      main-content-gradient-container,
-      main-content-gradient-solid-bottom-container
-    " extra="true">
-      <color>ff0000</color>
-      <visible>false</visible>
-    </image>
-    <!-- END: Overrides -->
-
-    <helpsystem name="help">
-      <origin>0.5 1</origin>
-      <pos>0.50 0.95</pos>
-    </helpsystem>
   </view>
 </theme>

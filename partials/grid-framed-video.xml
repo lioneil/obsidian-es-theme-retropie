@@ -1,0 +1,26 @@
+<theme>
+  <formatVersion>6</formatVersion>
+  <include>./grid-default.xml</include>
+  <include>./grid-framed-image.xml</include>
+
+  <variables>
+    <gridSystemWhiteImage>./../assets/art/space.png</gridSystemWhiteImage>
+  </variables>
+
+  <view name="grid">
+    <image name="md_image">
+      <visible>true</visible>
+    </image>
+
+    <video name="md_video">
+      <visible>true</visible>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <showSnapshotDelay>false</showSnapshotDelay>
+      <delay>2.5</delay>
+      <zIndex>3</zIndex>
+      <origin>0.50 0</origin>
+      <pos>0.75 0.135</pos>
+      <size>0.25 0.35</size>
+    </video>
+  </view>
+</theme>

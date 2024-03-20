@@ -1,0 +1,237 @@
+<theme>
+  <formatVersion>6</formatVersion>
+  <include>./grid-default.xml</include>
+
+  <variables>
+    <gridWidth>0.25</gridWidth>
+    <gridHeight>0.95</gridHeight>
+    <gridPosition>0.025 0.05</gridPosition>
+
+    <!--
+    example:
+    row is 5
+    column is 4
+    will create a grid like:
+    .  .  .  .  .  .
+    .  .  .  .  .  .
+    .  .  .  .  .  .
+    .  .  .  .  .  .
+    .  .  .  .  .  .
+    -->
+    <gridAutoLayout>1 5</gridAutoLayout>
+    <gridAutoLayoutSelectedZoom>1.18</gridAutoLayoutSelectedZoom>
+
+    <!--
+    Available values:
+    vertical     - more intuitive order from left to right, then top to bottom.
+    horizontal   - the tiles are ordered from top to bottom, then from left to right.
+    -->
+    <gridScrollDirection>vertical</gridScrollDirection>
+
+    <!--
+    Should be gridWidth / desired tiles in row
+    example:
+    gridWidth is 0.90 and I want 5 tiles in a row
+    gridTileWidth = gridWidth / 5
+    -->
+    <gridTileWidth>0.18</gridTileWidth>
+    <!--
+    Same as gridWidth but with gridHeight and desired tiles column
+    example:
+    gridHeight is 0.75 and I want 4 tiles in a row
+    gridTileHeight = gridHeight / 4
+    -->
+    <gridTileHeight>0.1875</gridTileHeight>
+  </variables>
+
+  <view name="grid">
+    <image name="logo">
+      <origin>0.50 0</origin>
+      <pos>0.15 0.025</pos>
+    </image>
+    <image name="gamegrid-divider-gradient-container" extra="true">
+      <path>./../${themeFolderArt}/transparent-gradient.white.bottom-top.png</path>
+      <rotation>180</rotation>
+      <color>${themeColorBackground}</color>
+      <pos>0 0.045</pos>
+      <size>0.30 0.05</size>
+      <zIndex>20</zIndex>
+    </image>
+
+    <imagegrid name="gamegrid">
+      <imageSource>marquee</imageSource>
+    </imagegrid>
+
+    <image name="
+      gamelist-container,
+      main-content-gradient-container,
+      main-content-gradient-solid-bottom-container
+    " extra="true">
+      <visible>true</visible>
+    </image>
+
+    <!-- START: Details metadata -->
+    <image name="md_name-container-guide" extra="true">
+      <size>0.30 0.15</size>
+      <origin>0 1</origin>
+      <pos>0.35 0.34</pos>
+    </image>
+    <text name="md_name">
+      <visible>true</visible>
+      <alignment>left</alignment>
+      <size>0.45 0.12</size>
+      <origin>0 1</origin>
+      <lineSpacing>1</lineSpacing>
+      <pos>0.40 0.66</pos>
+    </text>
+    <image name="md_marquee">
+      <visible>false</visible>
+      <maxSize>0.30 0.15</maxSize>
+      <origin>0 1</origin>
+      <pos>0.35 0.30</pos>
+    </image>
+    <!-- END: Details metadata -->
+
+    <!-- START: Developer -->
+    <image name="md_developer-container-guide" extra="true">
+      <origin>0 1</origin>
+      <pos>0.4 0.76</pos>
+      <size>0.20 0.025</size>
+    </image>
+    <image name="md_developer-icon" extra="true">
+      <origin>0 1</origin>
+      <pos>0.4 0.76</pos>
+      <maxSize>0.20 0.025</maxSize>
+      <zIndex>20</zIndex>
+    </image>
+    <text name="md_developer">
+      <alignment>left</alignment>
+      <origin>0 1</origin>
+      <pos>0.42 0.76</pos>
+      <size>0.20 0.03</size>
+    </text>
+    <!-- END: Developer -->
+
+    <!-- START: Player count -->
+    <image name="md_players-container-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <origin>1 1</origin>
+      <pos>0.90 0.732</pos>
+      <size>0.20 0.025</size>
+    </image>
+    <image name="md_players-icon" extra="true">
+      <visible>true</visible>
+      <origin>0 1</origin>
+      <pos>0.828 0.729</pos>
+      <maxSize>0.20 0.020</maxSize>
+      <zIndex>20</zIndex>
+    </image>
+    <text name="md_lbl_players">
+      <visible>true</visible>
+      <alignment>right</alignment>
+      <origin>1 1</origin>
+      <pos>0.885 0.732</pos>
+      <size>0.20 0.025</size>
+    </text>
+    <text name="md_players">
+      <visible>true</visible>
+      <lineSpacing>1</lineSpacing>
+      <alignment>right</alignment>
+      <origin>1 1</origin>
+      <pos>0.895 0.732</pos>
+      <size>0.20 0.025</size>
+    </text>
+    <!-- END: Player count -->
+
+    <!-- START: Genre -->
+    <image name="md_genre-container-guide" extra="true">
+      <origin>0 1</origin>
+      <pos>0.4 0.732</pos>
+      <size>0.40 0.025</size>
+    </image>
+    <image name="md_genre-icon" extra="true">
+      <origin>0 1</origin>
+      <pos>0.4 0.732</pos>
+      <maxSize>0.20 0.025</maxSize>
+      <zIndex>20</zIndex>
+    </image>
+    <text name="md_genre">
+      <alignment>left</alignment>
+      <origin>0 1</origin>
+      <pos>0.42 0.732</pos>
+      <size>0.35 0.025</size>
+    </text>
+    <!-- END: Genre -->
+
+    <!-- START: Release date -->
+    <image name="md_releasedate-icon" extra="true">
+      <pos>0.40 0.705</pos>
+      <maxSize>0.20 0.025</maxSize>
+    </image>
+    <datetime name="md_releasedate">
+      <visible>true</visible>
+      <format>%Y</format>
+      <origin>0 1</origin>
+      <pos>0.42 0.705</pos>
+      <size>0.20 0.025</size>
+    </datetime>
+    <!-- END: Release date -->
+
+    <!-- START: Rating -->
+    <image name="md_rating-container-guide" extra="true">
+      <origin>1 1</origin>
+      <pos>0.90 0.705</pos>
+    </image>
+    <rating name="md_rating">
+      <origin>1 1</origin>
+      <color>${themeColorAccent}</color>
+      <pos>0.90 0.705</pos>
+    </rating>
+    <!-- END: Rating -->
+
+    <!-- START: Last played -->
+    <text name="md_lbl_lastplayed">
+      <visible>false</visible>
+    </text>
+    <datetime name="md_lastplayed">
+      <visible>false</visible>
+    </datetime>
+    <!-- END: Last played -->
+
+    <!-- START: Details -->
+    <image name="md_description-container-guide" extra="true">
+      <size>0.50 0.10</size>
+      <pos>0.40 0.78</pos>
+    </image>
+    <text name="md_description">
+      <alignment>left</alignment>
+      <size>0.50 0.10</size>
+      <pos>0.40 0.78</pos>
+    </text>
+    <!-- END: Details -->
+
+    <!-- START: Background Media -->
+    <image name="md_image">
+      <visible>true</visible>
+      <origin>0 0</origin>
+      <pos>0.3 0</pos>
+      <size>0.70 0.80</size>
+      <zIndex>2</zIndex>
+    </image>
+    <video name="md_video">
+      <visible>true</visible>
+      <origin>0 0</origin>
+      <pos>0.30 0</pos>
+      <size>0.7 0.80</size>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <delay>3.5</delay>
+      <zIndex>2</zIndex>
+    </video>
+    <!-- END: Background Media -->
+
+    <helpsystem name="help">
+      <origin>0.5 1</origin>
+      <pos>0.65 0.95</pos>
+    </helpsystem>
+  </view>
+</theme>

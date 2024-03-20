@@ -1,0 +1,39 @@
+<theme>
+  <formatVersion>6</formatVersion>
+  <include>./grid-default.xml</include>
+
+  <variables>
+    <gridSystemWhiteImage>./../assets/art/space.png</gridSystemWhiteImage>
+  </variables>
+
+  <view name="grid">
+    <image name="md_image">
+      <visible>true</visible>
+      <zIndex>2</zIndex>
+      <origin>0.50 0</origin>
+      <pos>0.75 0.135</pos>
+      <size>0.25 0.35</size>
+    </image>
+
+    <image name="md_image-frame-container" extra="true">
+      <path>${gridSystemWhiteImage}</path>
+      <color>121212</color>
+      <visible>true</visible>
+      <zIndex>1</zIndex>
+      <origin>0.50 0</origin>
+      <pos>0.75 0.105</pos>
+      <size>0.2825 0.40</size>
+    </image>
+
+    <image name="md_image-halfscreen-guide" extra="true">
+      <visible>${systemTurnOnGuides}</visible>
+      <path>${gridSystemWhiteImage}</path>
+      <color>ffffff22</color>
+      <tile>false</tile>
+      <zIndex>1</zIndex>
+      <origin>0 0</origin>
+      <pos>0.5 0</pos>
+      <size>0.5 1</size>
+    </image>
+  </view>
+</theme>

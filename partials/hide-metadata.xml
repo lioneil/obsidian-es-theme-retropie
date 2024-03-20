@@ -26,6 +26,7 @@
       md_genre-icon,
       md_developer-icon,
       md_players-icon,
+      md_releasedate-icon,
     ">
       <visible>false</visible>
     </image>
