@@ -3,9 +3,9 @@
   <include>./grid-default.xml</include>
 
   <variables>
-    <gridWidth>0.25</gridWidth>
+    <gridWidth>0.30</gridWidth>
     <gridHeight>0.95</gridHeight>
-    <gridPosition>0.025 0.05</gridPosition>
+    <gridPosition>0 0.06</gridPosition>
 
     <!--
     example:
@@ -18,7 +18,7 @@
     .  .  .  .  .  .
     .  .  .  .  .  .
     -->
-    <gridAutoLayout>1 5</gridAutoLayout>
+    <gridAutoLayout>1 4</gridAutoLayout>
     <gridAutoLayoutSelectedZoom>1.18</gridAutoLayoutSelectedZoom>
 
     <!--
@@ -46,6 +46,7 @@
 
   <view name="grid">
     <image name="logo">
+      <maxSize>0.20 0.05</maxSize>
       <origin>0.50 0</origin>
       <pos>0.15 0.025</pos>
     </image>
@@ -53,7 +54,7 @@
       <path>./../${themeFolderArt}/transparent-gradient.white.bottom-top.png</path>
       <rotation>180</rotation>
       <color>${themeColorBackground}</color>
-      <pos>0 0.045</pos>
+      <pos>0 0.050</pos>
       <size>0.30 0.05</size>
       <zIndex>20</zIndex>
     </image>
