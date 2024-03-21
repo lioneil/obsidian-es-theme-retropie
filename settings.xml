@@ -18,7 +18,7 @@
     framed-video     - remove gradient and adds border
     artbook          - Grid layout with a sidebar of metadata of the currently selected game
     -->
-    <gridLayoutType>framed-video</gridLayoutType>
+    <gridLayoutType>artbook</gridLayoutType>
 
     <!--
     Available values:
@@ -32,6 +32,6 @@
     For debugging.
     Useful positioning guidelines if extending the theme.
     -->
-    <systemTurnOnGuides>true</systemTurnOnGuides>
+    <systemTurnOnGuides>false</systemTurnOnGuides>
   </variables>
 </theme>
