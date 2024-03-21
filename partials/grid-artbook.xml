@@ -42,6 +42,9 @@
     gridTileHeight = gridHeight / 4
     -->
     <gridTileHeight>0.1875</gridTileHeight>
+
+    <gridMargin>0.005 0.005</gridMargin>
+    <gridPadding>0.05 0.05</gridPadding>
   </variables>
 
   <view name="grid">

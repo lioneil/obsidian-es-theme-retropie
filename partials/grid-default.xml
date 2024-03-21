@@ -44,7 +44,7 @@
     <gridTileHeight>0.1875</gridTileHeight>
 
     <gridMargin>0.005 0.005</gridMargin>
-    <gridPadding>0.05 0.05</gridPadding>
+    <gridPadding>0 0</gridPadding>
   </variables>
 
   <view name="grid">
