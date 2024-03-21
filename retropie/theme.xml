@@ -11,6 +11,8 @@
     <gridPosition>0 0.75</gridPosition>
     <gridAutoLayout>9 1</gridAutoLayout>
     <gridScrollDirection>horizontal</gridScrollDirection>
+    <gridTileWidth>auto</gridTileWidth>
+    <gridTileHeight>auto</gridTileHeight>
   </variables>
 
   <view name="detailed, video">
@@ -38,6 +40,13 @@
   </view>
 
   <view name="grid">
+    <image name="logo">
+      <visible>true</visible>
+      <origin>0 0.5</origin>
+      <pos>0.05 0.09</pos>
+      <maxSize>0.08 0.05</maxSize>
+    </image>
+
     <text name="md_name">
       <visible>true</visible>
       <pos>0.05 0.405</pos>
@@ -58,6 +67,10 @@
 
     <text name="md_description">
       <visible>true</visible>
+      <alignment>left</alignment>
+      <origin>0 0</origin>
+      <pos>0.05 0.405</pos>
+      <size>0.45 0.10</size>
     </text>
   </view>
 </theme>

@@ -1,1 +1,4 @@
-[ ] Replace controllers from carbon and just rotate via image prop.
+[x] Replace controllers from carbon and just rotate via image prop.
+[ ] Fix themes
+[ ] Write documentation in README file
+[ ] Theme settings
