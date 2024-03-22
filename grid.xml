@@ -44,7 +44,6 @@
     </gridtile>
 
     <gridtile name="selected">
-      <padding>0.010 0.010</padding>
       <backgroundCornerSize>0.010 0.010</backgroundCornerSize>
       <backgroundColor>${themeColorAccent}</backgroundColor>
     </gridtile>

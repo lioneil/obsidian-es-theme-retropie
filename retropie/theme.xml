@@ -7,12 +7,12 @@
   <variables>
     <themeArtFolder>./../assets/art</themeArtFolder>
     <gridWidth>1</gridWidth>
-    <gridHeight>0.15</gridHeight>
-    <gridPosition>0 0.75</gridPosition>
-    <gridAutoLayout>9 1</gridAutoLayout>
+    <gridHeight>0.20</gridHeight>
+    <gridPosition>0 0.70</gridPosition>
+    <gridAutoLayout>7 1</gridAutoLayout>
     <gridScrollDirection>horizontal</gridScrollDirection>
-    <gridTileWidth>auto</gridTileWidth>
-    <gridTileHeight>auto</gridTileHeight>
+    <gridTileWidth>0</gridTileWidth>
+    <gridTileHeight>1</gridTileHeight>
   </variables>
 
   <view name="detailed, video">
@@ -64,6 +64,15 @@
       <padding>0.05 0</padding>
       <imageSource>thumbnail</imageSource>
     </imagegrid>
+
+    <gridtile name="default">
+      <padding>0.010 0.015</padding>
+    </gridtile>
+
+    <gridtile name="selected">
+      <padding>0.010 0.015</padding>
+    </gridtile>
+
 
     <text name="md_description">
       <visible>true</visible>
