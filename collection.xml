@@ -6,5 +6,10 @@
     <image name="logo">
       <path>${system.theme}/marquee.png</path>
     </image>
+
+    <image name="lineart" extra="true">
+      <path>${systemWhiteImage}</path>
+      <visible>false</visible>
+    </image>
   </view>
 </theme>
