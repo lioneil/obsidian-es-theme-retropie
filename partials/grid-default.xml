@@ -106,7 +106,7 @@
       <size>0.085 0.025</size>
     </image>
     <rating name="md_rating">
-      <color>${themeColorText}</color>
+      <color>${themeColorHelpText}</color>
       <origin>0 1</origin>
       <pos>0.05 0.395</pos>
       <size>auto 0.025</size>

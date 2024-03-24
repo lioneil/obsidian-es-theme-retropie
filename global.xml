@@ -313,7 +313,7 @@
     <rating name="md_rating">
       <color>${themeColorMuted}</color>
       <origin>1 1</origin>
-      <color>${themeColorAccent}</color>
+      <color>${themeColorHelpText}</color>
       <pos>0.90 0.705</pos>
       <size>auto 0.020</size>
     </rating>
