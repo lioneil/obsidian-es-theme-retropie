@@ -51,6 +51,7 @@
       <visible>true</visible>
       <size>0.75 0.068</size>
       <pos>0.05 0.34</pos>
+      <zIndex>10</zIndex>
     </text>
 
     <image name="md_image">
