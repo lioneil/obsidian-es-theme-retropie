@@ -56,8 +56,8 @@
       <visible>true</visible>
       <origin>0.50 0.50</origin>
       <pos>0.75 0.30</pos>
-      <size>0.25 0</size>
-      <zIndex>10</zIndex>
+      <maxSize>0.15 0.20</maxSize>
+      <size>0.15 0.25</size>
     </image>
 
     <imagegrid name="gamegrid">
