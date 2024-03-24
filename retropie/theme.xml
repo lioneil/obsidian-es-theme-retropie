@@ -49,7 +49,8 @@
 
     <text name="md_name">
       <visible>true</visible>
-      <pos>0.05 0.405</pos>
+      <size>0.75 0.068</size>
+      <pos>0.05 0.34</pos>
     </text>
 
     <image name="md_image">
