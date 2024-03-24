@@ -81,19 +81,20 @@
       <pos>0.35 0.34</pos>
     </image>
     <text name="md_name">
-      <visible>false</visible>
+      <visible>true</visible>
       <alignment>left</alignment>
       <size>0.45 0.12</size>
-      <origin>0 1</origin>
+      <origin>0 0</origin>
       <lineSpacing>1</lineSpacing>
-      <pos>0.40 0.66</pos>
+      <pos>0.40 0.50</pos>
+      <zIndex>2</zIndex>
     </text>
     <image name="md_marquee">
       <visible>true</visible>
       <maxSize>0.30 0.15</maxSize>
       <origin>0.5 0.5</origin>
       <pos>0.65 0.60</pos>
-    </image>
+          </image>
     <!-- END: Details metadata -->
 
     <!-- START: Developer -->
@@ -188,7 +189,7 @@
     </image>
     <rating name="md_rating">
       <origin>1 1</origin>
-      <color>${themeColorAccent}</color>
+      <color>${themeColorHelpText}</color>
       <pos>0.90 0.705</pos>
     </rating>
     <!-- END: Rating -->
