@@ -37,6 +37,12 @@
     <text name="md_description">
       <visible>true</visible>
     </text>
+
+    <textlist name="gamelist">
+      <origin>0 1</origin>
+      <pos>0 1</pos>
+      <size>0.30 .55</size>
+    </textlist> 
   </view>
 
   <view name="grid">
