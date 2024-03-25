@@ -357,6 +357,16 @@
   </view>
 
   <view name="detailed, video">
+    <text name="md_name">
+      <fontSize>${themeFontSizeTitle}</fontSize>
+      <visible>true</visible>
+      <alignment>left</alignment>
+      <size>0.45 0.12</size>
+      <origin>0 0</origin>
+      <lineSpacing>1</lineSpacing>
+      <pos>0.40 0.50</pos>
+      <zIndex>1</zIndex>
+    </text>
     <helpsystem name="help">
       <origin>0.5 1</origin>
       <pos>0.65 0.95</pos>

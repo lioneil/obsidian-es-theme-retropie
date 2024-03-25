@@ -32,7 +32,7 @@
       <!-- <maxSize>0.7 1</maxSize> -->
       <size>0.70 0.846</size>
       <visible>true</visible>
-      <zIndex>1</zIndex>
+      <zIndex>2</zIndex>
     </image>
 
     <video name="md_video">
@@ -41,7 +41,7 @@
       <maxSize>0.70 0.95</maxSize>
       <showSnapshotNoVideo>true</showSnapshotNoVideo>
       <delay>2.5</delay>
-      <zIndex>2</zIndex>
+      <zIndex>3</zIndex>
     </video>
   </view>
 </theme>
