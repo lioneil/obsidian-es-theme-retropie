@@ -1,4 +1,16 @@
 <theme>
   <formatVersion>6</formatVersion>
   <include>./../collection.xml</include>
+
+  <view name="basic">
+    <image name="lineart" extra="true">
+      <visible>true</visible>
+      <path>./lineart.png</path>
+      <color>${themeColorAccent}30</color>
+      <rotation>0</rotation>
+      <origin>0.5 0.5</origin>
+      <pos>0.65 0.45</pos>
+      <size>auto 0.65</size>
+    </image>
+  </view>
 </theme>
