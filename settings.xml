@@ -1,16 +1,6 @@
 <theme>
   <variables>
     <!--
-    Available values:
-    screenshot  - use the game screenshot for the md_image.
-    boxart      - use box art for the md_image.
-    composite   - use skyscraper (or similar) compisited image of
-                  box art, screenshots, and marquee for the md_image.
-    -->
-		<mdImageType>screenshot</mdImageType>
-
-
-    <!--
     Values only availble in Grid layout:
     bg-image         - Grid layout, uses md_image
     bg-video         - Play the video instead of showing an image
