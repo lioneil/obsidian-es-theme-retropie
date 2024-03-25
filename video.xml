@@ -38,7 +38,7 @@
     <video name="md_video">
       <origin>0 0</origin>
       <pos>0.30 0</pos>
-      <maxSize>0.7 0.9</maxSize>
+      <maxSize>0.70 0.95</maxSize>
       <showSnapshotNoVideo>true</showSnapshotNoVideo>
       <delay>2.5</delay>
       <zIndex>2</zIndex>
