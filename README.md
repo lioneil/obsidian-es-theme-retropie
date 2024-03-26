@@ -66,5 +66,6 @@ todo...
 
 - System logos directly copied from [carbon theme](https://github.com/RetroPie/es-theme-carbon-2021)
 - Additional system, platform, and console logos from [Dan Patrick](https://archive.org/details/console-logos-professionally-redrawn-plus-official-versions)  
+- [Bootleg Games](./bootlegs/marquee.png) logo created by me.
 - "ROM" text in [ROMHacks](./romhacks/marquee.png) logo generated from <a href="https://www.textstudio.com/">Text Studio</a>
 - "Hacks" text in [ROMHacks](./romhacks/marquee.png) logo used Lazer '84 Font - a free font inspired in 80's. Designed by [Juan Hodgson](https://www.behance.net/gallery/31261857/LAZER-84-Free-Font).
