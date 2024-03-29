@@ -13,4 +13,18 @@
       <size>auto 0.65</size>
     </image>
   </view>
+
+  <view name="system">
+    <image name="lineart" extra="true">
+      <visible>true</visible>
+      <path>./lineart.png</path>
+      <rotation>0</rotation>
+    </image>
+  </view>
+
+  <view name="system, basic, detailed, video, grid">
+    <image name="logo">
+      <path>./marquee.png</path>
+    </image>
+  </view>
 </theme>

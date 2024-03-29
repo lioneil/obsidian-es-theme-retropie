@@ -11,6 +11,16 @@ For use with EmulationStation (http://www.emulationstation.org/)
 ```
 See [Carbon's CHANGELOG](./CARBON_CHANGELOG.txt) for details regarding the Carbon Theme.
 
+
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Customization](#customization)
+- [Attributions](#attributions)
+
+
 ## Features
 
 The theme supports RetroPie/EmulationStation's 4 gamelist view style in a 16:9 aspect ratio.
@@ -44,7 +54,11 @@ Adds custom systems logos (e.g. romhacks, openbor)
 
 ### Basic View
 
-todo...
+![Basic View - Scraped](./assets/screenshots/ui.basic.png)
+
+![Basic View - Full List](./assets/screenshots/ui.basic.snes.png)
+
+![Basic View - Custom Collection](./assets/screenshots/ui.basic.sf.png)
 
 ### Detailed View
 
@@ -52,7 +66,9 @@ todo...
 
 ### Video View
 
-todo...
+Same as detailed view, but a video will play in the background after a delay (requires scraping video).
+
+[TODO: gif file here]
 
 ### Grid View
 
@@ -60,7 +76,25 @@ todo...
 
 ![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.png)
 
----
+![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.alt.png)
+
+
+## Installation
+
+**Using Git**:
+
+```bash
+cd ~/.emulationstation/themes
+git clone --depth=1 git@github.com:lioneil/obsidian-es-theme.git obsidian
+```
+
+**Manual installation**:
+
+- Download the [latest](#todo-download-link) zip file (master branch will always be the latest stable release). 
+- Extract the contents to `/home/<user>/.emulationstation/themes/obsidian/` directory.
+
+See other [releases](#todo-releases-link).
+
 
 ## Attributions
 
