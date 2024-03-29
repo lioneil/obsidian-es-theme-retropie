@@ -17,6 +17,7 @@ See [Carbon's CHANGELOG](./CARBON_CHANGELOG.txt) for details regarding the Carbo
 
 - [Features](#features)
 - [Installation](#installation)
+- [Launch Images](#launch-images)
 - [Customization](#customization)
 - [Attributions](#attributions)
 
@@ -94,6 +95,46 @@ git clone --depth=1 git@github.com:lioneil/obsidian-es-theme.git obsidian
 - Extract the contents to `/home/<user>/.emulationstation/themes/obsidian/` directory.
 
 See other [releases](#todo-releases-link).
+
+
+## Launch Images
+
+> This feature is optional. See the section about installing Launch Images if you want this feature.
+
+The theme can add custom launch images per system in place of the default runcommand screen. The runcommand screen is RetroPie's script responsible to launch your emulators/games. This screen shows the runcommand's configurations and features.
+
+Here is the default runcommand screen:
+
+![Runcommand Default](./assets/screenshots/launching-default.png)
+
+Here is the theme's replacement launch image for NeoGeo:
+
+![Neogeo Launch Menu](./assets/launching/neogeo/launching.png)
+
+Make sure "Launch menu art" is Disabled. In EmulationStation, go to RetroPie Setup > configuration / tools > runcommand. Set "Launch meu art" to Disabled. Otherwise the game's scraped box art will show up on the runcommand screen. More details about Launch Menu can be found in the [RetroPie docs](https://retropie.org.uk/docs/Runcommand/#adding-custom-launching-images).
+
+
+### Installing Launch Images
+
+Run the script `install-launch-images.sh` included in this theme.
+
+```bash
+cd ~/.emulationstation/themes/obsidian # or wherever you installed the theme.
+chmod a+x .bin/install-launch-images.sh # to allow it to execute under your user
+.bin/install-launch-images.sh # run it
+```
+
+The script will simply copy files from `./assets/launchers/` to `/opt/retropie/configs/`. Check the script included in this theme for the code.
+
+There is also an uninstall script which simply removes all `/opt/retropie/configs/*/launching.png` files.
+
+```bash
+cd ~/.emulationstation/themes/obsidian # or wherever you installed the theme.
+chmod a+x .bin/uninstall-launch-images.sh
+.bin/uninstall-launch-images.sh
+```
+
+And of course, you can always just manually copy the files from `./assets/launching/` and paste them in `/opt/retropie/configs/`.
 
 
 ## Attributions
