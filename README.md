@@ -111,9 +111,6 @@ Here is the theme's replacement launch image for NeoGeo:
 
 ![Neogeo Launch Menu](./assets/launching/neogeo/launching.png)
 
-Make sure "Launch menu art" is Disabled. In EmulationStation, go to RetroPie Setup > configuration / tools > runcommand. Set "Launch meu art" to Disabled. Otherwise the game's scraped box art will show up on the runcommand screen. More details about Launch Menu can be found in the [RetroPie docs](https://retropie.org.uk/docs/Runcommand/#adding-custom-launching-images).
-
-
 ### Installing Launch Images
 
 Run the script `install-launch-images.sh` included in this theme.
@@ -125,6 +122,8 @@ chmod a+x .bin/install-launch-images.sh # to allow it to execute under your user
 ```
 
 The script will simply copy files from `./assets/launchers/` to `/opt/retropie/configs/`. Check the script included in this theme for the code.
+
+Make sure "Launch menu art" is Disabled. In EmulationStation, go to RetroPie Setup > configuration / tools > runcommand. Set "Launch meu art" to Disabled. Otherwise the game's scraped box art will show up on the runcommand screen. More details about Launch Menu can be found in the [RetroPie docs](https://retropie.org.uk/docs/Runcommand/#adding-custom-launching-images).
 
 There is also an uninstall script which simply removes all `/opt/retropie/configs/*/launching.png` files.
 
@@ -142,7 +141,7 @@ The theme supports various game collections (e.g. streetfighter, megamanx, etc).
 
 **Automatic Custom Collection from Theme**
 
-The theme comes with a (low-tech) script to automate the collections of the games.
+The theme comes with a (low-tech) script to automate the collections of games.
 
 ```bash
 cd ~/.emulationstation/themes/obsidian # or wherever you installed the theme.
@@ -151,6 +150,8 @@ chmod a+x .bin/generate-custom-collections.sh
 ```
 
 This will generate `custom-<collection-name>.cfg` in `~/.emulationstation/collections` directory.
+
+Then in EmulationStation, go to Main Menu (press start) > Game Collection Settings > Custom Game Collections, and check all desired collections.
 
 **How it works**
 
