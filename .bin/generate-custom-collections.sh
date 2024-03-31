@@ -8,7 +8,7 @@ typeset -A GAMES=(
     [earthwormjim]="earthwormjim;earthworm jim"
     [fatalfury]="fatalfury;fatal fury;rbff;fatfur;garou"
     [finalfight]="finalfight;final fight;ffight"
-    [streetfighter]="sfii;street fighter"
+    [streetfighter]="sf1;sf2;sfii;street fighter;hsf;ssf;sfa;sfz"
 )
 
 COLLECTIONS="$(ls -1 ./)"
