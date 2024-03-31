@@ -72,9 +72,6 @@ for collection in "${!GAMES[@]}"; do
         echo "Adding entries to $ES_COLLECTIONS_PATH/$name"
         printf "%s\n" "${collected[@]}" > "$ES_COLLECTIONS_PATH/$name"
     fi
-
-    echo "
-"
 done
 
 echo "
