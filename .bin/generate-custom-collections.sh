@@ -48,7 +48,7 @@ for collection in "${!GAMES[@]}"; do
             results="$(ls -1 $ROMS_PATH/${system})"
             
             for file in $results; do
-                if [[ $file =~ $filename ]]; then
+                if [[ $file = $filename* ]]; then
                     echo "FOUND MATCH"
                     echo "System: $system"
                     echo "File: $ROMS_PATH/${system}/$file"
@@ -70,6 +70,7 @@ for collection in "${!GAMES[@]}"; do
 
     if ! [ -z "$collected" ]; then
         echo "Adding entries to $ES_COLLECTIONS_PATH/$name"
+        echo "-----------"
         printf "%s\n" "${collected[@]}" > "$ES_COLLECTIONS_PATH/$name"
     fi
 done
