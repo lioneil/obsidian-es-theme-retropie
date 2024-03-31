@@ -1,0 +1,38 @@
+<theme>
+  <formatVersion>6</formatVersion>
+  <include>./theme.xml</include>
+
+  <view name="system, basic, detailed, video, grid">
+    <image name="logo">
+      <path>${system.theme}/marquee.svg</path>
+    </image>
+
+    <image name="lineart" extra="true">
+      <path>${systemWhiteImage}</path>
+      <visible>false</visible>
+    </image>
+  </view>
+
+  <view name="system">
+    <image name="lineart" extra="true">
+      <visible>true</visible>
+      <path>${system.theme}/lineart.svg</path>
+      <rotation>0</rotation>
+      <size>auto 0.80</size>
+      <maxSize>0.25 0.50</maxSize>
+      <pos>0.5 0.45</pos>
+    </image>
+  </view>
+
+  <view name="basic">
+    <image name="lineart" extra="true">
+      <visible>true</visible>
+      <path>${system.theme}/lineart.svg</path>
+      <color>${themeColorAccent}30</color>
+      <rotation>0</rotation>
+      <origin>0.5 0.5</origin>
+      <pos>0.65 0.45</pos>
+      <size>auto 0.65</size>
+    </image>
+  </view>
+</theme>
