@@ -20,6 +20,12 @@ for system in $INSTALLED_SYSTEMS; do
         continue
     fi
 
+    if [[ -f "$destination" ]]; then
+        failed+=($system)
+        echo "SKIPPING. ${destination} already exists in ${CONFIGS_PATH}"
+        continue
+    fi
+
     # Main copy command.
     cp $target $destination
 
