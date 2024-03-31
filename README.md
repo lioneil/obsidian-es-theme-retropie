@@ -18,7 +18,7 @@ See [Carbon's CHANGELOG](./CARBON_CHANGELOG.txt) for details regarding the Carbo
 - [Features](#features)
 - [Installation](#installation)
 - [Launch Images](#launch-images)
-- [Customization](#customization)
+- [Custom Collections](#custom-collections)
 - [Attributions](#attributions)
 
 
@@ -135,6 +135,26 @@ chmod a+x .bin/uninstall-launch-images.sh
 ```
 
 And of course, you can always just manually copy the files from `./assets/launching/` and paste them in `/opt/retropie/configs/`.
+
+## Custom Collections
+
+The theme supports various game collections (e.g. streetfighter, megamanx, etc).
+
+**Automatic Custom Collection from Theme**
+
+The theme comes with a (low-tech) script to automate the collections of the games.
+
+```bash
+cd ~/.emulationstation/themes/obsidian # or wherever you installed the theme.
+chmod a+x .bin/generate-custom-collections.sh
+.bin/generate-custom-collections.sh
+```
+
+This will generate `custom-<collection-name>.cfg` in `~/.emulationstation/collections` directory.
+
+**How it works**
+
+The script will attempt to read your `roms` directory, and try to regex-match the file names found againts a preset of known file names for a given custom-collection. It's pretty low-tech in a sense that the association between a custom-collection and what games goes in that collection is hardcoded in the script. Check out the [script](./.bin/generate-custom-collections.sh) to see the list of files and it's associated custom-collection.
 
 
 ## Attributions
