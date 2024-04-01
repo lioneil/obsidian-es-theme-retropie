@@ -2,12 +2,15 @@
 # format:
 # [custom-collection]:"game1;game2;case-insensitive;supports spaces;etc"
 typeset -A GAMES=(
+    [aof]="aof;art of fighting;the art of fighting"
     [asterix]="asterix;obelix"
-    [contra]="contra"
+    [contra]="contra;super contra"
     [darkstalkers]="darkstalkers;dstlk;vhunt;vsav"
     [earthwormjim]="earthwormjim;earthworm jim"
     [fatalfury]="fatalfury;fatal fury;rbff;fatfur;garou"
     [finalfight]="finalfight;final fight;ffight"
+    [jojo]="jojo;jojoba"
+    [kof]="kof;king of fighter;the king of fighter"
     [streetfighter]="sf1;sf2;sfii;street fighter;hsf;ssf;sfa;sfz"
 )
 
@@ -39,14 +42,14 @@ for collection in "${!GAMES[@]}"; do
     for filename in "${filenames[@]}"; do
         IFS=$'\n'
         filename="${filename}"
-        
+
         for system in $INSTALLED_SYSTEMS; do
             if ! [[ -d $ROMS_PATH/${system} ]]; then
                 continue
             fi
 
             results="$(ls -1 $ROMS_PATH/${system})"
-            
+
             for file in $results; do
                 if [[ $file = $filename* ]]; then
                     echo "FOUND MATCH"
