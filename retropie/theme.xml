@@ -42,7 +42,7 @@
       <origin>0 1</origin>
       <pos>0 1</pos>
       <size>0.30 .55</size>
-    </textlist> 
+    </textlist>
   </view>
 
   <view name="grid">
