@@ -11,7 +11,20 @@ typeset -A GAMES=(
     [finalfight]="finalfight;final fight;ffight"
     [jojo]="jojo;jojoba"
     [kof]="kof;king of fighter;the king of fighter"
+    [marvelvscapcom]="mvsc;marvelvscapcom;mshvsfa;msh;xmcota;xmvsf;Marvel vs. Capcom;Marvel Superheroes vs.;X-Men vs."
+    [megamanx]="megamanx;megaman x;SLUS-00561;SLUS-01334;SLUS-01395"
+    [metalslug]="metalslug;Metal Slug;mslug"
+    [metroid]="metroid;Super Metroid"
+    [pokemon]="pokemon;pokémon"
+    [powerinstinct]="powerinstinct;powerins;pwrinst;groovef;Power Instinct"
+    [romhacks]="romhacks;sfiii3an;sfz3mix;Clock Tower Deluxe"
+    # careful not to add just "sonic",
+    # because it will pickup "Sonic Wings", and other non-hedgehog games
+    [sonic]="sonic the hedgehog;sonic and knuckles;sonic & knuckles"
     [streetfighter]="sf1;sf2;sfii;street fighter;hsf;ssf;sfa;sfz"
+    [streetsofrage]="streetsofrage;streets of rage;bare knuckle;mt_srage;mp_sor"
+    [supermario]="super mario"
+    [tmnt]="tmnt;teenage mutant ninja turtles;"
 )
 
 COLLECTIONS="$(ls -1 ./)"
