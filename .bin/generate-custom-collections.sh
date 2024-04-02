@@ -2,7 +2,7 @@
 # format:
 # [custom-collection]:"game1;game2;case-insensitive;supports spaces;etc"
 typeset -A GAMES=(
-    [aof]="aof;art of fighting;the art of fighting"
+    [artoffighting]="aof;art of fighting;the art of fighting"
     [asterix]="asterix;obelix"
     [contra]="contra;super contra"
     [darkstalkers]="darkstalkers;dstlk;vhunt;vsav"
