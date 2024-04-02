@@ -38,6 +38,15 @@ ROMS_PATH="$HOME/RetroPie/roms"
 
 shopt -s nocasematch
 
+while getopts 'f' OPTION; do
+    case "$OPTION" in
+        f) echo "Deleting custom collections in ${ES_COLLECTIONS_PATH} first"
+            rm -r "${ES_COLLECTIONS_PATH}/custom-"*;;
+        ?) echo "Script usage: $(basename \$0) [-f]" >&2
+            exit 1 ;;
+    esac
+done
+
 for collection in "${!GAMES[@]}"; do
     IFS=';'
     filenames="${GAMES[$collection]}"
