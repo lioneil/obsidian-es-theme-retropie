@@ -19,6 +19,7 @@ See [Carbon's CHANGELOG](./CARBON_CHANGELOG.txt) for details regarding the Carbo
 - [Installation](#installation)
 - [Launch Images](#launch-images)
 - [Custom Collections](#custom-collections)
+- [Splashscreens](#splashscreens)
 - [Attributions](#attributions)
 
 
@@ -36,19 +37,19 @@ The theme supports RetroPie/EmulationStation's 4 gamelist view style in a 16:9 a
 
 **Default Platform**
 
-Uses colorful platform logos.
+Uses colorful platform logos from carbon theme.
 
 ![Systems View - Platform](./assets/screenshots/ui.system.platform.png)
 
 **Custom Collection**
 
-Supports various game collection and franchises.
+Supports various game collections and series.
 
 ![Systems View - Custom Collection](./assets/screenshots/ui.system.custom-collection.png)
 
 **Custom System**
 
-Adds custom systems logos (e.g. romhacks, openbor)
+Adds custom systems logos (e.g. romhacks, openbor, homebrews, etc)
 
 ![Systems View - Custom System](./assets/screenshots/ui.system.custom-system.png)
 
@@ -91,7 +92,7 @@ git clone --depth=1 git@github.com:lioneil/obsidian-es-theme.git obsidian
 
 **Manual installation**:
 
-- Download the [latest](#todo-download-link) zip file (master branch will always be the latest stable release). 
+- Download the [latest](#todo-download-link) zip file (master branch will always be the latest stable release).
 - Extract the contents to `/home/<user>/.emulationstation/themes/obsidian/` directory.
 
 See other [releases](#todo-releases-link).
@@ -147,6 +148,9 @@ The theme comes with a (low-tech) script to automate the collections of games.
 cd ~/.emulationstation/themes/obsidian # or wherever you installed the theme.
 chmod a+x .bin/generate-custom-collections.sh
 .bin/generate-custom-collections.sh
+
+# or add -f flag to DELETE ALL ~/.emulationstation/collections/custom-* files
+.bin/generate-custom-collections.sh -f
 ```
 
 This will generate `custom-<collection-name>.cfg` in `~/.emulationstation/collections` directory.
@@ -158,10 +162,36 @@ Then in EmulationStation, go to Main Menu (press start) > Game Collection Settin
 The script will attempt to read your `roms` directory, and try to regex-match the file names found againts a preset of known file names for a given custom-collection. It's pretty low-tech in a sense that the association between a custom-collection and what games goes in that collection is hardcoded in the script. Check out the [script](./.bin/generate-custom-collections.sh) to see the list of files and it's associated custom-collection.
 
 
-## Attributions
+## Splashscreens
+
+The theme comes with its custom [RetroPie Splashscreens](https://retropie.org.uk/docs/Splashscreen/). Please note, splashscreens are only available on the Raspberry Pi.
+
+![Splashscreen 1](./assets/splashscreens/splashscreen.png)
+
+![Splashscreen 2](./assets/splashscreens/splashscreen.now-loading.png)
+
+![Splashscreen 3](./assets/splashscreens/splashscreen-now-loading-with-retropie-logo.png)
+
+**Installation**
+
+```bash
+cd ~/.emulationstation/themes/obsidian # or wherever you installed the theme.
+chmod a+x .bin/install-splashscreens.sh # to allow it to execute under your user
+.bin/install-splashscreens.sh # run it
+```
+
+This will copy files from `assets/splashscreens/` to `~/RetroPie/splashscreens`.
+
+Then in EmulationStation settings, choose your desired splashscreen as described in the [docs](https://retropie.org.uk/docs/Splashscreen).
+
+
+---
+
+
+### Attributions
 
 - System logos directly copied from [carbon theme](https://github.com/RetroPie/es-theme-carbon-2021)
-- Additional system, platform, and console logos from [Dan Patrick](https://archive.org/details/console-logos-professionally-redrawn-plus-official-versions)  
+- Additional system, platform, and console logos from [Dan Patrick](https://archive.org/details/console-logos-professionally-redrawn-plus-official-versions)
 - [Bootleg Games](./bootlegs/marquee.png) logo created by me.
 - "ROM" text in [ROMHacks](./romhacks/marquee.png) logo generated from <a href="https://www.textstudio.com/">Text Studio</a>
 - "Hacks" text in [ROMHacks](./romhacks/marquee.png) logo used Lazer '84 Font - a free font inspired in 80's. Designed by [Juan Hodgson](https://www.behance.net/gallery/31261857/LAZER-84-Free-Font).
