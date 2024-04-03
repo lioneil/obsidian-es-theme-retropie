@@ -97,7 +97,7 @@ for collection in "${!GAMES[@]}"; do
 
             for file in $results; do
                 if [[ $file = $filename* ]]; then
-                    if ! [[ $file =~ .*\.($VALID_EXTENSIONS) ]]; then
+                    if ! [[ $file =~ .*\.($VALID_EXTENSIONS)$ ]]; then
                         echo "✘ SKIPPING: Unknown file extension for $file";
                         continue
                     fi
