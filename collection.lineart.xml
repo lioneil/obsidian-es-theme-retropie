@@ -1,0 +1,24 @@
+<theme>
+  <formatVersion>6</formatVersion>
+  <include>./theme.xml</include>
+
+  <view name="system, basic, detailed, video, grid">
+    <image name="logo">
+      <path>${system.theme}/marquee.png</path>
+    </image>
+
+    <image name="lineart" extra="true">
+      <path>${systemWhiteImage}</path>
+      <visible>false</visible>
+    </image>
+  </view>
+
+  <view name="system, basic">
+    <image name="lineart" extra="true">
+      <visible>true</visible>
+      <path>${system.theme}/lineart.png</path>
+      <!-- <color>${themeColorAccent}30</color> -->
+      <rotation>0</rotation>
+    </image>
+  </view>
+</theme>
