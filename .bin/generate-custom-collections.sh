@@ -12,7 +12,7 @@ typeset -A GAMES=(
     [jojo]="jojo;jojoba"
     [kof]="kof;king of fighter;the king of fighter"
     [marvelvscapcom]="mvsc;marvelvscapcom;mshvsfa;msh;xmcota;xmvsf;Marvel vs. Capcom;Marvel Superheroes vs.;X-Men vs."
-    [megamanx]="megamanx;megaman x;SLUS-00561;SLUS-01334;SLUS-01395"
+    [megamanx]="megamanx;megaman x;mega man x;SLUS-00561;SLUS-01334;SLUS-01395"
     [metalslug]="metalslug;Metal Slug;mslug"
     [metroid]="metroid;Super Metroid"
     [pokemon]="pokemon;pokémon"
@@ -26,6 +26,8 @@ typeset -A GAMES=(
     [supermario]="super mario"
     [tmnt]="tmnt;teenage mutant ninja turtles;"
 )
+
+VALID_EXTENSIONS="zip|ZIP|7z|7Z|chd|CHD|cdi|CDI|gdi|GDI|iso|ISO|cue|CUE|rar|RAR"
 
 COLLECTIONS="$(ls -1 ./)"
 COLLECTIONS="${COLLECTIONS}"
@@ -95,7 +97,12 @@ for collection in "${!GAMES[@]}"; do
 
             for file in $results; do
                 if [[ $file = $filename* ]]; then
-                    echo "FOUND MATCH: [$system] $ROMS_PATH/${system}/$file"
+                    if ! [[ $file =~ .*\.($VALID_EXTENSIONS) ]]; then
+                        echo "✘ SKIPPING: Unknown file extension for $file";
+                        continue
+                    fi
+
+                    echo "✔️ FOUND MATCH: [$system] $ROMS_PATH/${system}/$file"
                     file=$ROMS_PATH/${system}/$file
 
                     if ! [[ -f $file ]]; then
