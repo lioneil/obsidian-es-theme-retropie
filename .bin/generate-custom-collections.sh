@@ -39,17 +39,18 @@ ROMS_PATH="$HOME/RetroPie/roms"
 shopt -s nocasematch
 
 force_delete=false
-while getopts 'f' OPTION; do
+list_only=false
+while getopts ':fl' OPTION; do
     case "$OPTION" in
         f) echo "FORCE DELETE: on"
             force_delete=true ;;
+        l) echo "List supported custom collections"
+            rm "./SUPPORTED_CUSTOM_COLLECTIONS.txt"
+            list_only=true ;;
         ?) echo "Script usage: $(basename \$0) [-f]" >&2
             exit 1 ;;
     esac
 done
-
-echo "
-"
 
 for collection in "${!GAMES[@]}"; do
     IFS=';'
@@ -58,6 +59,13 @@ for collection in "${!GAMES[@]}"; do
     unset IFS
     collected=()
     name="custom-${collection}.cfg"
+
+    if $list_only; then
+        echo "$collection"
+        collected+=($collection)
+        printf "%s\n" "${collection}" >> "./SUPPORTED_CUSTOM_COLLECTIONS.txt"
+        continue
+    fi
 
     if $force_delete; then
         if [[ -f "${ES_COLLECTIONS_PATH}/${name}" ]]; then
