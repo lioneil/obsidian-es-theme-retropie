@@ -38,14 +38,18 @@ ROMS_PATH="$HOME/RetroPie/roms"
 
 shopt -s nocasematch
 
+force_delete=false
 while getopts 'f' OPTION; do
     case "$OPTION" in
-        f) echo "Deleting custom collections in ${ES_COLLECTIONS_PATH} first"
-            rm -r "${ES_COLLECTIONS_PATH}/custom-"*;;
+        f) echo "FORCE DELETE: on"
+            force_delete=true ;;
         ?) echo "Script usage: $(basename \$0) [-f]" >&2
             exit 1 ;;
     esac
 done
+
+echo "
+"
 
 for collection in "${!GAMES[@]}"; do
     IFS=';'
@@ -55,9 +59,18 @@ for collection in "${!GAMES[@]}"; do
     collected=()
     name="custom-${collection}.cfg"
 
+    if $force_delete; then
+        if [[ -f "${ES_COLLECTIONS_PATH}/${name}" ]]; then
+            echo "Deleting file $name"
+            rm -r "${ES_COLLECTIONS_PATH}/${name}"
+        fi
+    fi
+
+    echo "Scanning collection: $collection"
+
     if [[ -f "${ES_COLLECTIONS_PATH}/${name}" ]]; then
         echo "SKIPPING $collection: Custom collection $name already exists."
-        echo "-----------"
+        echo "-----------------"
         continue
     fi
 
@@ -74,11 +87,7 @@ for collection in "${!GAMES[@]}"; do
 
             for file in $results; do
                 if [[ $file = $filename* ]]; then
-                    echo "FOUND MATCH"
-                    echo "System: $system"
-                    echo "File: $ROMS_PATH/${system}/$file"
-                    echo "Custom collection: $collection"
-                    echo "-----------"
+                    echo "FOUND MATCH: [$system] $ROMS_PATH/${system}/$file"
                     file=$ROMS_PATH/${system}/$file
 
                     if ! [[ -f $file ]]; then
@@ -95,9 +104,11 @@ for collection in "${!GAMES[@]}"; do
 
     if ! [ -z "$collected" ]; then
         echo "Adding entries to $ES_COLLECTIONS_PATH/$name"
-        echo "-----------"
         printf "%s\n" "${collected[@]}" > "$ES_COLLECTIONS_PATH/$name"
+    else
+        echo "No games collected for $collection"
     fi
+    echo "-----------------"
 done
 
 echo "
