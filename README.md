@@ -45,7 +45,7 @@ Uses colorful platform logos from carbon theme.
 
 Supports various game collections and series.
 
-![Systems View - Custom Collection](./assets/screenshots/ui.system.custom-collection.png)
+![Systems View - Custom Collection](./assets/screenshots/ui.system.collection.png)
 
 **Custom System**
 
@@ -60,7 +60,7 @@ Adds custom systems logos (e.g. romhacks, openbor, homebrews, etc)
 
 ![Basic View - Full List](./assets/screenshots/ui.basic.snes.png)
 
-![Basic View - Custom Collection](./assets/screenshots/ui.basic.sf.png)
+![Basic View - Custom Collection](./assets/screenshots/ui.basic.collection.png)
 
 ### Detailed View
 
@@ -69,8 +69,6 @@ Adds custom systems logos (e.g. romhacks, openbor, homebrews, etc)
 ### Video View
 
 Same as detailed view, but a video will play in the background after a delay (requires scraping video).
-
-[TODO: gif file here]
 
 ### Grid View
 
