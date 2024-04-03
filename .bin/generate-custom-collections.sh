@@ -102,7 +102,7 @@ for collection in "${!GAMES[@]}"; do
                         continue
                     fi
 
-                    echo "✔️ FOUND MATCH: [$system] $ROMS_PATH/${system}/$file"
+                    echo "✔ FOUND MATCH: [$system] $ROMS_PATH/${system}/$file"
                     file=$ROMS_PATH/${system}/$file
 
                     if ! [[ -f $file ]]; then
