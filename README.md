@@ -138,6 +138,10 @@ And of course, you can always just manually copy the files from `./assets/launch
 
 The theme supports various game collections (e.g. streetfighter, megamanx, etc).
 
+![Systems View - Custom Collection](./assets/screenshots/ui.system.collection.png)
+
+In EmulationStation, go to Menu > Game Collection Settings > Create New Custom Collection from Theme, pick the collection you want and start adding games. There is a way to automate this process, detailed below.
+
 **Automatic Custom Collection from Theme**
 
 The theme comes with a (low-tech) script to automate the collections of games.
@@ -147,13 +151,17 @@ cd ~/.emulationstation/themes/obsidian # or wherever you installed the theme.
 chmod a+x .bin/generate-custom-collections.sh
 .bin/generate-custom-collections.sh
 
-# or add -f flag to DELETE ALL ~/.emulationstation/collections/custom-* files
+# or add -f flag to DELETE ALL ~/.emulationstation/collections/custom-[supported].cfg files first
+# then force regenerate them. Only supported custom collections are deleted,
+# your own custom-*.cfg will not be touched.
 .bin/generate-custom-collections.sh -f
 ```
 
 This will generate `custom-<collection-name>.cfg` in `~/.emulationstation/collections` directory.
 
 Then in EmulationStation, go to Main Menu (press start) > Game Collection Settings > Custom Game Collections, and check all desired collections.
+
+Please see [list](./SUPPORTED_CUSTOM_COLLECTIONS.txt) of currently supported game collections. The list might expand.
 
 **How it works**
 
