@@ -8,7 +8,8 @@
 	<variables>
 		<!-- Override these color values to your desired colors. -->
 		<colorPrimary>ffffff</colorPrimary>
-		<colorAccent>efbc0b</colorAccent>
+		<colorAccentAlt>efbc0b</colorAccentAlt>
+		<colorAccent>f4b20c</colorAccent>
 		<colorBackground>1a1a1a</colorBackground>
 		<colorContentBackground>2f2f2f</colorContentBackground>
 
