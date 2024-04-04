@@ -53,6 +53,8 @@ Adds custom systems logos (e.g. romhacks, openbor, homebrews, etc)
 
 ![Systems View - Custom System](./assets/screenshots/ui.system.custom-system.png)
 
+![Systems View - Bootleg](./assets/screenshots/ui.system.bootleg.png)
+
 
 ### Basic View
 
