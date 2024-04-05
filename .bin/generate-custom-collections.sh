@@ -25,6 +25,7 @@ typeset -A GAMES=(
     [streetsofrage]="streetsofrage;streets of rage;bare knuckle;mt_srage;mp_sor"
     [supermario]="super mario"
     [tmnt]="tmnt;teenage mutant ninja turtles;"
+    [zelda]="zelda;the legend of zelda;legend of zelda;tloz;link's awakening"
 )
 
 VALID_EXTENSIONS="zip|ZIP|7z|7Z|chd|CHD|cdi|CDI|gdi|GDI|iso|ISO|cue|CUE|rar|RAR|smc|SMC|sfc|SFC"
