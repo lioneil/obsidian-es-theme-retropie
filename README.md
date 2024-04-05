@@ -20,6 +20,7 @@ See [Carbon's CHANGELOG](./CARBON_CHANGELOG.txt) for details regarding the Carbo
 - [Launch Images](#launch-images)
 - [Custom Collections](#custom-collections)
 - [Splashscreens](#splashscreens)
+- [Pause Overlays](#pause-overlays)
 - [Attributions](#attributions)
 
 
@@ -227,11 +228,23 @@ The script will attempt to read your `roms` directory, and try to regex-match th
 
 The theme comes with its custom [RetroPie Splashscreens](https://retropie.org.uk/docs/Splashscreen/). Please note, splashscreens are only available on the Raspberry Pi.
 
-![Splashscreen 1](./assets/splashscreens/splashscreen.png)
+> Choose one of the three, or randomly show on boot.
 
-![Splashscreen 2](./assets/splashscreens/splashscreen.now-loading.png)
-
-![Splashscreen 3](./assets/splashscreens/splashscreen-now-loading-with-retropie-logo.png)
+<table style="width: 100%">
+  <tbody>
+    <tr>
+      <td>
+        <img src="./assets/splashscreens/splashscreen.png">
+      </td>
+      <td>
+        <img src="./assets/splashscreens/splashscreen.now-loading.png">
+      </td>
+      <td>
+        <img src="./assets/splashscreens/splashscreen-now-loading-with-retropie-logo.png">
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 **Installation**
 
@@ -245,9 +258,80 @@ This will copy files from `assets/splashscreens/` to `~/RetroPie/splashscreens`.
 
 Then in EmulationStation settings, choose your desired splashscreen as described in the [docs](https://retropie.org.uk/docs/Splashscreen).
 
+## Pause Overlays
+
+RetroArch supports [Overlays](https://docs.libretro.com/guides/libretro-overlays/), most commonly used for bezels (border artwork, marquees, etc). Pause Overlays are custom overlays that combines RetroArch's pause state, while simultaneously toggling an overlay.
+
+Here's another repository that does the same thing: [svera/arcade-pause-overlays](https://github.com/svera/arcade-pause-overlays)
+
+The theme offers a simple pause overlay for your RetroPie:
+
+<table style="width: 100%">
+  <tbody>
+    <tr>
+      <td colspan="3">
+        <img src="./assets/pause/generic/pause-yellow-transparent-overlay.png">
+    </td>
+    </tr>
+    <tr>
+      <td colspan="3"><strong>Other Pause Overlays</strong></td>
+    </tr>
+    <tr>
+      <td>
+        <img src="./assets/pause/generic/pause-white-transparent-overlay.png">
+      </td>
+      <td>
+        <img src="./assets/pause/neogeo/pause-neogeo-overlay.png">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+**Installation**
+
+Install via script:
+
+```bash
+cd ~/.emulationstation/themes/obsidian # or wherever you installed the theme.
+chmod a+x .bin/install-pause-overlays.sh # to allow it to execute under your user
+
+.bin/install-pause-overlays.sh <overlay>
+
+# where <overlay> is one of the supported overlays.
+# E.g.
+.bin/install-pause-overlays.sh generic # will install the generic overlay
+```
+
+For list of all supported Pause Overlays, look into the [assets/pause](./assets/pause/) directory. Supported system will expand in future releases.
+
+Once installed - for example the `generic` overlay - it will attempt to override values in `/opt/retropie/configs/all/retroarch.cfg`:
+
+```env
+input_overlay_enable = true
+input_overlay = "~/.config/retroarch/overlays/pause/generic/obsidian-generic-pause-overlay.cfg"
+```
+
+Then there is a bit of a manual thing for you to do. Override the input overlay trigger to be the same as pause toggle key:
+
+```env
+input_pause_toggle = "p"  # keyboard "P"
+input_overlay_next = "p"  # same as the pause toggle key
+
+input_pause_toggle_btn = "10" # specify your controller pause, 10 might not be the correct value for your controller
+input_overlay_next_btn = "10" # specify your controller pause
+```
+
+The input settings can also be done in RetroArch GUI > Configuration > Input.
+
+Once installation is done, feel free to go into `~/.config/retroarch/overlays/pause/` directory and modify the `.cfg` file to your liking.
+
+## Conclusion
+
+Thank you for checking out the theme! :heart:
+
+I will be looking to expand the supported custom collection, splashscreens, and pause overlays in future releases. I am also looking into per-game pause overlay, where you can cycle through characters movelist when you pause the game (maybe on a separate repository).
 
 ---
-
 
 ### Attributions
 
