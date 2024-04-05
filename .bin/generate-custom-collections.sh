@@ -27,7 +27,7 @@ typeset -A GAMES=(
     [tmnt]="tmnt;teenage mutant ninja turtles;"
 )
 
-VALID_EXTENSIONS="zip|ZIP|7z|7Z|chd|CHD|cdi|CDI|gdi|GDI|iso|ISO|cue|CUE|rar|RAR,smc,SMC,sfc,SFC"
+VALID_EXTENSIONS="zip|ZIP|7z|7Z|chd|CHD|cdi|CDI|gdi|GDI|iso|ISO|cue|CUE|rar|RAR|smc|SMC|sfc|SFC"
 
 COLLECTIONS="$(ls -1 ./)"
 COLLECTIONS="${COLLECTIONS}"
