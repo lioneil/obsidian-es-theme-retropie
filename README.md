@@ -51,34 +51,42 @@ Supports various game collections and series.
 
 Adds custom systems logos (e.g. romhacks, openbor, homebrews, etc)
 
-![Systems View - Custom System](./assets/screenshots/ui.system.custom-system.png)
-
-![Systems View - Bootleg](./assets/screenshots/ui.system.bootleg.png)
+|     |     |
+| --- | --- |
+| ![Systems View - Custom System](./assets/screenshots/ui.system.custom-system.png) | ![Systems View - Bootleg](./assets/screenshots/ui.system.bootleg.png) |
 
 
 ### Basic View
 
-![Basic View - Scraped](./assets/screenshots/ui.basic.png)
-
-![Basic View - Full List](./assets/screenshots/ui.basic.snes.png)
-
 ![Basic View - Custom Collection](./assets/screenshots/ui.basic.collection.png)
 
-### Detailed View
+|     |     |
+| --- | --- |
+| ![Basic View - Scraped](./assets/screenshots/ui.basic.png) | ![Basic View - Full List](./assets/screenshots/ui.basic.snes.png) |
+
+
+### Detailed / Video View
 
 ![Detailed View - Scraped](./assets/screenshots/ui.detailed.png)
 
-### Video View
-
-Same as detailed view, but a video will play in the background after a delay (requires scraping video).
+> :pencil: **Video View** is same as Detailed View, but a video will play in the background after a delay (requires scraping video enabled).
 
 ### Grid View
 
 ![Grid View - Screenshot](./assets/screenshots/ui.grid.scraped.png)
 
-![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.png)
 
-![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.alt.png)
+|     |     |
+| --- | --- |
+| ![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.alt.png) | ![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.png) |
+
+### RetroPie Settings Screens
+
+| System View | Basic View |
+| ----------- | ---------- |
+| ![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.png)       | ![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.png)        |
+| **Detailed / Video View**  | **Grid View** |
+| ![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.png)       | ![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.png)        |
 
 
 ## Installation
