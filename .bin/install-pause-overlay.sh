@@ -79,6 +79,12 @@ if [[ $SELECTED_SYSTEM == "all" ]]; then
     exit
 fi
 
+if [[ $SELECTED_SYSTEM == "generic" ]]; then
+    set_retroarch_config "all"
+    install_pause_overlay $SELECTED_SYSTEM
+    exit
+fi
+
 # ==============================================================================
 # Install Specific Pause Overlays
 # ==============================================================================
