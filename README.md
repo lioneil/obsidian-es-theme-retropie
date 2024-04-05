@@ -51,42 +51,87 @@ Supports various game collections and series.
 
 Adds custom systems logos (e.g. romhacks, openbor, homebrews, etc)
 
-|     |     |
-| --- | --- |
-| ![Systems View - Custom System](./assets/screenshots/ui.system.custom-system.png) | ![Systems View - Bootleg](./assets/screenshots/ui.system.bootleg.png) |
+<table style="width: 100%">
+  <tbody>
+    <tr>
+      <td> <img src="./assets/screenshots/ui.system.custom-system.png"> </td>
+      <td> <img src="./assets/screenshots/ui.system.bootleg.png"> </td>
+    </tr>
+  </tbody>
+</table>
 
 
 ### Basic View
 
-![Basic View - Custom Collection](./assets/screenshots/ui.basic.collection.png)
-
-|     |     |
-| --- | --- |
-| ![Basic View - Scraped](./assets/screenshots/ui.basic.png) | ![Basic View - Full List](./assets/screenshots/ui.basic.snes.png) |
+<table style="width: 100%">
+  <tbody>
+    <tr>
+      <td colspan="2"> <img src="./assets/screenshots/ui.basic.collection.png"> </td>
+    </tr>
+    <tr>
+      <td> <img src="./assets/screenshots/ui.basic.png"> </td>
+      <td> <img src="./assets/screenshots/ui.basic.snes.png"> </td>
+    </tr>
+  </tbody>
+</table>
 
 
 ### Detailed / Video View
 
-![Detailed View - Scraped](./assets/screenshots/ui.detailed.png)
+> :pencil: **Video View** is same layout as Detailed View, but a video will play in the background after a delay (requires scraping video enabled).
 
-> :pencil: **Video View** is same as Detailed View, but a video will play in the background after a delay (requires scraping video enabled).
+<table style="width: 100%">
+  <tbody>
+    <tr>
+      <td colspan="2"> <img src="./assets/screenshots/ui.detailed.png"> </td>
+    </tr>
+    <tr>
+      <td> <img src="./assets/screenshots/ui.detailed.metalslug.png"> </td>
+      <td> <img src="./assets/screenshots/ui.detailed.sonic.png"> </td>
+    </tr>
+  </tbody>
+</table>
 
 ### Grid View
 
-![Grid View - Screenshot](./assets/screenshots/ui.grid.scraped.png)
+<table style="width: 100%">
+  <tbody>
+    <tr>
+      <td colspan="2"> <img src="./assets/screenshots/ui.grid.scraped.png"> </td>
+    </tr>
+    <tr>
+      <td> <img src="./assets/screenshots/ui.grid.allgames.png"> </td>
+      <td> <img src="./assets/screenshots/ui.grid.romhacks.png"> </td>
+    </tr>
+  </tbody>
+</table>
 
+### RetroPie Screens
 
-|     |     |
-| --- | --- |
-| ![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.alt.png) | ![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.png) |
-
-### RetroPie Settings Screens
-
-| System View | Basic View |
-| ----------- | ---------- |
-| ![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.png)       | ![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.png)        |
-| **Detailed / Video View**  | **Grid View** |
-| ![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.png)       | ![Grid View - Screenshot](./assets/screenshots/ui.grid.romhacks.png)        |
+<table style="width: 100%">
+  <tbody>
+    <tr>
+      <td colspan="3">
+        <div style="margin-bottom: 4px; text-align: center"><strong>System View</strong></div>
+        <img src="./assets/screenshots/ui.system.retropie.png">
+    </td>
+    </tr>
+    <tr>
+      <td>
+        <div style="margin-bottom: 4px; text-align: center"><strong>Basic View</strong></div>
+        <img src="./assets/screenshots/ui.basic.retropie.png">
+      </td>
+      <td>
+        <div style="margin-bottom: 4px; text-align: center"><strong>Detailed / Video View</strong></div>
+        <img src="./assets/screenshots/ui.detailed.retropie.png">
+      </td>
+      <td>
+        <div style="margin-bottom: 4px; text-align: center"><strong>Grid View</strong></div>
+        <img src="./assets/screenshots/ui.grid.retropie.png">
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 
 ## Installation
