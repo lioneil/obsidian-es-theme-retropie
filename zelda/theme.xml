@@ -1,0 +1,18 @@
+<theme>
+  <formatVersion>6</formatVersion>
+  <include>./../collection.alt.xml</include>
+
+  <view name="system, basic">
+    <image name="lineart" extra="true">
+      <visible>true</visible>
+      <path>./lineart.png</path>
+      <size>0.35 auto</size>
+    </image>
+  </view>
+
+  <view name="system, basic, detailed, video, grid">
+    <image name="logo">
+      <path>./marquee.svg</path>
+    </image>
+  </view>
+</theme>
