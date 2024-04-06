@@ -17,7 +17,6 @@
     <image name="lineart" extra="true">
       <visible>true</visible>
       <path>${system.theme}/lineart.png</path>
-      <!-- <color>${themeColorAccent}30</color> -->
       <rotation>0</rotation>
     </image>
   </view>
