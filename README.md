@@ -141,7 +141,7 @@ Adds custom systems logos (e.g. romhacks, openbor, homebrews, etc)
 
 ```bash
 cd ~/.emulationstation/themes
-git clone --depth=1 git@github.com:lioneil/obsidian-es-theme.git obsidian
+git clone --depth=1 git@github.com:lioneil/obsidian-es-theme-retropie.git obsidian
 ```
 
 **Manual installation**:
