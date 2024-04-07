@@ -316,7 +316,7 @@ input_overlay_enable = true
 input_overlay = "~/.config/retroarch/overlays/pause/generic/obsidian-generic-pause-overlay.cfg"
 ```
 
-Then there is a bit of a manual thing for you to do. Override the input overlay trigger to be the same as pause toggle key:
+Then there is a bit of manual setup for you to do. In `/opt/retropie/configs/all/retroarch.cfg`, override the input overlay trigger to be the same as pause toggle key:
 
 ```env
 input_pause_toggle = "p"  # keyboard "P"
@@ -325,6 +325,10 @@ input_overlay_next = "p"  # same as the pause toggle key
 input_pause_toggle_btn = "10" # specify your controller pause, 10 might not be the correct value for your controller
 input_overlay_next_btn = "10" # specify your controller pause
 ```
+
+Pausing any RetroArch-run game, will look something like:
+
+![Screenshot - Pause Overlay](./assets/screenshots/ui.pause.png)
 
 The input settings can also be done in RetroArch GUI > Configuration > Input.
 
