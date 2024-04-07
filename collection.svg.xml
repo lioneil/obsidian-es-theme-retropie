@@ -15,7 +15,7 @@
 
   <view name="system">
     <image name="lineart" extra="true">
-      <visible>true</visible>
+      <visible>${showCustomCollectionLineart}</visible>
       <path>${system.theme}/lineart.svg</path>
       <rotation>0</rotation>
       <size>auto 0.80</size>

@@ -16,7 +16,7 @@
   <view name="system">
     <image name="lineart" extra="true">
       <visible>${showCustomCollectionLineart}</visible>
-      <path>${system.theme}/lineart.png</path>
+      <path>${system.theme}/lineart.alt.png</path>
       <rotation>0</rotation>
     </image>
   </view>
@@ -24,7 +24,7 @@
   <view name="basic">
     <image name="lineart" extra="true">
       <visible>true</visible>
-      <path>${system.theme}/lineart.png</path>
+      <path>${system.theme}/lineart.alt.png</path>
       <rotation>0</rotation>
     </image>
   </view>

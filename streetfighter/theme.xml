@@ -16,7 +16,7 @@
 
   <view name="system">
     <image name="lineart" extra="true">
-      <visible>true</visible>
+      <visible>${showCustomCollectionLineart}</visible>
       <path>./lineart.png</path>
       <rotation>0</rotation>
     </image>

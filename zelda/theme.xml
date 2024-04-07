@@ -1,8 +1,16 @@
 <theme>
   <formatVersion>6</formatVersion>
-  <include>./../collection.alt.xml</include>
+  <include>./../collection.svg.xml</include>
 
-  <view name="system, basic">
+  <view name="system">
+    <image name="lineart" extra="true">
+      <visible>${showCustomCollectionLineart}</visible>
+      <path>./lineart.png</path>
+      <size>0.35 auto</size>
+    </image>
+  </view>
+
+  <view name="basic">
     <image name="lineart" extra="true">
       <visible>true</visible>
       <path>./lineart.png</path>
