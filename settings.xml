@@ -1,6 +1,12 @@
 <theme>
   <variables>
     <!--
+    Whether to display
+    custom collection lineart or not.
+    -->
+    <showCustomCollectionLineart>true</showCustomCollectionLineart>
+
+    <!--
     Values only availble in Grid layout:
     bg-image         - Grid layout, uses md_image
     bg-video         - Play the video instead of showing an image
