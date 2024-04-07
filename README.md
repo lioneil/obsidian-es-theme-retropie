@@ -211,6 +211,11 @@ chmod a+x .bin/generate-custom-collections.sh
 # then force regenerate them. Only supported custom collections are deleted,
 # your own custom-*.cfg will not be touched.
 .bin/generate-custom-collections.sh -f
+
+# or add -n flag to only scan for a specific supported collection
+.bin/generate-custom-collections.sh -n streetfighter
+# add -f to force renegeration of custom-streetfighter.cfg file
+.bin/generate-custom-collections.sh -fn streetfighter
 ```
 
 This will generate `custom-<collection-name>.cfg` in `~/.emulationstation/collections` directory.

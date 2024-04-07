@@ -43,17 +43,26 @@ shopt -s nocasematch
 
 force_delete=false
 list_only=false
-while getopts ':fl' OPTION; do
+collection_name=false
+while getopts ':fln:' OPTION; do
     case "$OPTION" in
         f) echo "FORCE DELETE: on"
             force_delete=true ;;
         l) echo "List supported custom collections"
             rm "./SUPPORTED_CUSTOM_COLLECTIONS.txt"
             list_only=true ;;
-        ?) echo "Script usage: $(basename \$0) [-f]" >&2
+        n)
+            collection_name=$OPTARG ;;
+        ?) echo "Script usage: .bin/$(basename $0) -[f][l][n <name>]" >&2
             exit 1 ;;
     esac
 done
+
+if ! [[ -v $GAMES[$collection_name] ]]; then
+    echo "Found: $collection_name"
+    collection_games="${GAMES[$collection_name]}"
+    GAMES=(["$collection_name"]="$collection_games")
+fi
 
 for collection in "${!GAMES[@]}"; do
     IFS=';'
