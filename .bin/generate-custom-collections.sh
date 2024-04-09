@@ -18,6 +18,7 @@ typeset -A GAMES=(
     [pokemon]="pokemon;pokémon"
     [powerinstinct]="powerinstinct;powerins;pwrinst;groovef;Power Instinct"
     [romhacks]="romhacks;sfiii3an;sfz3mix;Clock Tower Deluxe"
+    [samuraishodown]="samuraishodown;samurai shodown;samsho;samsh5"
     # careful not to add just "sonic",
     # because it will pickup "Sonic Wings", and other non-hedgehog games
     [sonic]="sonic the hedgehog;sonic and knuckles;sonic & knuckles"
