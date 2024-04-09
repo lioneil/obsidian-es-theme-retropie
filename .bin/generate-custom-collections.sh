@@ -4,7 +4,7 @@
 typeset -A GAMES=(
     [artoffighting]="aof;art of fighting;the art of fighting"
     [asterix]="asterix;obelix"
-    [contra]="contra;super contra"
+    [contra]="contra;super contra;scontra;probotector"
     [darkstalkers]="darkstalkers;dstlk;vhunt;vsav"
     [earthwormjim]="earthwormjim;earthworm jim"
     [fatalfury]="fatalfury;fatal fury;rbff;fatfur;garou"
