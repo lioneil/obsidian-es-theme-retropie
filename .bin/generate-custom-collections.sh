@@ -59,10 +59,12 @@ while getopts ':fln:' OPTION; do
     esac
 done
 
-if ! [[ -v $GAMES[$collection_name] ]]; then
-    echo "Found: $collection_name"
-    collection_games="${GAMES[$collection_name]}"
-    GAMES=(["$collection_name"]="$collection_games")
+if ! [[ $collection_name == false ]]; then
+    if ! [[ -v $GAMES[$collection_name] ]]; then
+        echo "Found: $collection_name"
+        collection_games="${GAMES[$collection_name]}"
+        GAMES=(["$collection_name"]="$collection_games")
+    fi
 fi
 
 for collection in "${!GAMES[@]}"; do
