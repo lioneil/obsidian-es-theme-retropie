@@ -1,0 +1,11 @@
+<theme>
+  <formatVersion>6</formatVersion>
+  <include>./../collection.svg.xml</include>
+
+  <view name="system, basic">
+    <image name="lineart" extra="true">
+      <visible>${showCustomCollectionLineart}</visible>
+      <path>lineart.png</path>
+    </image>
+  </view>
+</theme>
