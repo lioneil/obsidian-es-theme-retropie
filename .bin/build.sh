@@ -39,5 +39,8 @@ incremented_version=$(increment_version "$TAG_VERSION" "$1")
 
 echo "$incremented_version" > ./VERSION
 
+git add ./VERSION
+git commit -m "version: update version to $incremented_version"
+
 tag_version="v$incremented_version"
 git tag -a "$tag_version" "Build $incremented_version for release"
