@@ -1,4 +1,18 @@
 <theme>
   <formatVersion>6</formatVersion>
   <include>./../collection.svg.xml</include>
+
+  <view name="system, basic">
+    <image name="lineart" extra="true">
+      <path>./lineart.png</path>
+      <size>auto 0.60</size>
+      <pos>0.50 0.35</pos>
+    </image>
+  </view>
+
+  <view name="basic">
+    <image name="lineart" extra="true">
+      <pos>0.65 0.45</pos>
+    </image>
+  </view>
 </theme>
