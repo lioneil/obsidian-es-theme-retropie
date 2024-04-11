@@ -146,10 +146,10 @@ git clone --depth=1 git@github.com:lioneil/obsidian-es-theme-retropie.git obsidi
 
 **Manual installation**:
 
-- Download the [latest](#todo-download-link) zip file (master branch will always be the latest stable release).
+- Download the [latest](https://github.com/lioneil/obsidian-es-theme-retropie/releases) zip file (the highest tag will always be the latest stable release).
 - Extract the contents to `/home/<user>/.emulationstation/themes/obsidian/` directory.
 
-See other [releases](#todo-releases-link).
+See other [releases](https://github.com/lioneil/obsidian-es-theme-retropie/releases).
 
 
 ## Launch Images
