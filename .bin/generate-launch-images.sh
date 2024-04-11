@@ -10,6 +10,8 @@ success=()
 
 convert_cmd=(convert -background none -resize "x235>" -resize "640x>")
 
+mkdir tmp
+
 for file in $THEME_SYSTEMS; do
     system="${file/.svg/}"
     logo="${THEME_PATH}/${file}"
@@ -41,7 +43,7 @@ for file in $THEME_SYSTEMS; do
     fi
 
     launching="./tmp/${system}.lineart.png"
-    
+
     convert "$launching" \
         -fill "#342e18" \
         -colorize 100 \
