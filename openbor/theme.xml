@@ -1,4 +1,16 @@
 <theme>
   <formatVersion>6</formatVersion>
   <include>./../collection.lineart.xml</include>
+
+  <view name="system, basic">
+    <image name="lineart" extra="true">
+      <path>./lineart.svg</path>
+    </image>
+  </view>
+
+  <view name="system">
+    <image name="lineart" extra="true">
+      <rotation>-35</rotation>
+    </image>
+  </view>
 </theme>
