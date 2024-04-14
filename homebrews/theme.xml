@@ -1,10 +1,21 @@
 <theme>
   <formatVersion>6</formatVersion>
-  <include>./../collection.xml</include>
+  <include>./../collection.svg.xml</include>
 
-  <view name="system, basic, detailed, video, grid">
+  <view name="system, basic">
     <image name="logo">
       <path>./homebrew.svg</path>
+    </image>
+
+    <image name="lineart" extra="true">
+      <origin>0.5 0.5</origin>
+      <size>0.3 0</size>
+    </image>
+  </view>
+
+  <view name="system">
+    <image name="lineart" extra="true">
+      <rotation>-35</rotation>
     </image>
   </view>
 </theme>
