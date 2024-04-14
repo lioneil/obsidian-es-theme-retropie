@@ -1,4 +1,17 @@
 <theme>
   <formatVersion>6</formatVersion>
-  <include>./../collection.xml</include>
+  <include>./../collection.lineart.xml</include>
+
+  <view name="system, basic">
+    <image name="lineart" extra="true">
+      <size>auto 0.60</size>
+    </image>
+  </view>
+
+  <view name="system">
+    <image name="lineart" extra="true">
+      <size>auto 0.60</size>
+      <pos>0.50 0.35</pos>
+    </image>
+  </view>
 </theme>
