@@ -79,7 +79,10 @@ Adds custom systems logos (e.g. romhacks, openbor, homebrews, etc)
 
 ### Detailed / Video View
 
-> :pencil: **Video View** is same layout as Detailed View, but a video will play in the background after a delay (requires scraping video enabled).
+> [!NOTE]
+> **Video View** is same layout as Detailed View, but a video will play in the background after a delay (requires scraping video enabled). \
+> Disable OMX Player in the Menu if you're on Raspberry Pi.
+
 
 <table style="width: 100%">
   <tbody>
