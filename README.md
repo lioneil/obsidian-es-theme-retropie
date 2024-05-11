@@ -155,6 +155,23 @@ git clone --depth=1 git@github.com:lioneil/obsidian-es-theme-retropie.git obsidi
 See other [releases](https://github.com/lioneil/obsidian-es-theme-retropie/releases).
 
 
+## Scraping Game Assets
+
+I don't think the default scraper will look right out-of-the-box. I used the other scraping tool from the RetroPie settings, _skyscraper_.
+
+Here's my artwork.xml (place in ~/.skyscraper/artwork.xml):
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<artwork>
+  <output type="cover"/>
+  <output type="screenshot"/>
+  <output type="texture"/>
+  <output type="wheel"/>
+  <output type="marquee" resource="wheel"/>
+</artwork>
+```
+
 ## Launch Images
 
 > This feature is optional. See the section about installing Launch Images if you want this feature.
